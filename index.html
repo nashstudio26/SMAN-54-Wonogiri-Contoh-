@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMA Negeri 54 Wonogiri - Unggul, Berkarakter & Berwawasan Global</title>
+    
+    <!-- Favicon Sekolah -->
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1ZD3BQxowpqMtcOIj-glz-XXb9ukhuLYM">
+    <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/1ZD3BQxowpqMtcOIj-glz-XXb9ukhuLYM">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome 6 CDN -->
@@ -48,10 +53,10 @@
         .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen selection:bg-brand-500 selection:text-white">
 
     <!-- Mobile Drawer Backdrop Overlay -->
-    <div id="mobile-menu-overlay" onclick="toggleMobileMenu()" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-40 hidden transition-opacity"></div>
+    <div id="mobile-menu-overlay" onclick="toggleMobileMenu()" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-40 hidden transition-opacity"></div>
 
     <!-- Top Navigation Header -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-nav border-b border-slate-100 shadow-sm transition-all duration-200">
@@ -59,7 +64,7 @@
             <div class="flex items-center justify-between h-16 sm:h-20">
                 <!-- Logo & Brand Header -->
                 <button type="button" class="flex items-center gap-2.5 sm:gap-3 cursor-pointer group text-left outline-none bg-transparent border-0 p-0" onclick="navigateTo('beranda')">
-                    <img id="site-logo-img" src="https://lh3.googleusercontent.com/d/1ZD3BQxowpqMtcOIj-glz-XXb9ukhuLYM" alt="Logo SMAN 54 Wonogiri" class="h-9 sm:h-12 w-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform" 
+                    <img id="site-logo-img" src="https://lh3.googleusercontent.com/d/1ZD3BQxowpqMtcOIj-glz-XXb9ukhuLYM" alt="Logo SMAN 54 Wonogiri" class="h-10 sm:h-12 w-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform" 
                          onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1ZD3BQxowpqMtcOIj-glz-XXb9ukhuLYM&sz=w500';">
                     <div>
                         <span id="site-logo-name" class="block text-base sm:text-xl font-extrabold tracking-tight text-slate-900 leading-none group-hover:text-brand-600 transition">SMAN 54 WONOGIRI</span>
@@ -77,12 +82,12 @@
                             Profil <i class="fa-solid fa-chevron-down text-[10px] opacity-70"></i>
                         </button>
                         <div id="dropdown-profil" class="dropdown-menu absolute left-0 mt-1 w-56 bg-white rounded-xl shadow-xl border border-slate-100 hidden group-hover:block transition-all duration-150 p-2 z-50">
-                            <button type="button" onclick="navigateTo('profil-sejarah')" class="block w-full text-left px-3 py-2 text-xs rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Sejarah Singkat</button>
-                            <button type="button" onclick="navigateTo('profil-visi-misi')" class="block w-full text-left px-3 py-2 text-xs rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Visi & Misi</button>
-                            <button type="button" onclick="navigateTo('profil-struktur')" class="block w-full text-left px-3 py-2 text-xs rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Struktur Organisasi</button>
-                            <button type="button" onclick="navigateTo('profil-program')" class="block w-full text-left px-3 py-2 text-xs rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Program Unggulan</button>
-                            <button type="button" onclick="navigateTo('profil-akreditasi')" class="block w-full text-left px-3 py-2 text-xs rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Status Akreditasi & Dapodik</button>
-                            <button type="button" onclick="navigateTo('profil-komite')" class="block w-full text-left px-3 py-2 text-xs rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Komite Sekolah</button>
+                            <button type="button" onclick="navigateTo('profil-sejarah')" class="block w-full text-left px-3 py-2 text-xs sm:text-sm rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Sejarah Singkat</button>
+                            <button type="button" onclick="navigateTo('profil-visi-misi')" class="block w-full text-left px-3 py-2 text-xs sm:text-sm rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Visi & Misi</button>
+                            <button type="button" onclick="navigateTo('profil-struktur')" class="block w-full text-left px-3 py-2 text-xs sm:text-sm rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Struktur Organisasi</button>
+                            <button type="button" onclick="navigateTo('profil-program')" class="block w-full text-left px-3 py-2 text-xs sm:text-sm rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Program Unggulan</button>
+                            <button type="button" onclick="navigateTo('profil-akreditasi')" class="block w-full text-left px-3 py-2 text-xs sm:text-sm rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Status Akreditasi & Dapodik</button>
+                            <button type="button" onclick="navigateTo('profil-komite')" class="block w-full text-left px-3 py-2 text-xs sm:text-sm rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Komite Sekolah</button>
                         </div>
                     </div>
 
@@ -92,9 +97,9 @@
                             Akademik <i class="fa-solid fa-chevron-down text-[10px] opacity-70"></i>
                         </button>
                         <div id="dropdown-akademik" class="dropdown-menu absolute left-0 mt-1 w-52 bg-white rounded-xl shadow-xl border border-slate-100 hidden group-hover:block transition-all duration-150 p-2 z-50">
-                            <button type="button" onclick="navigateTo('akademik-kurikulum')" class="block w-full text-left px-3 py-2 text-xs rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Kurikulum Resmi</button>
-                            <button type="button" onclick="navigateTo('akademik-mapel')" class="block w-full text-left px-3 py-2 text-xs rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Mata Pelajaran</button>
-                            <button type="button" onclick="navigateTo('akademik-bk')" class="block w-full text-left px-3 py-2 text-xs rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Bimbingan Konseling (BK)</button>
+                            <button type="button" onclick="navigateTo('akademik-kurikulum')" class="block w-full text-left px-3 py-2 text-xs sm:text-sm rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Kurikulum Resmi</button>
+                            <button type="button" onclick="navigateTo('akademik-mapel')" class="block w-full text-left px-3 py-2 text-xs sm:text-sm rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Mata Pelajaran</button>
+                            <button type="button" onclick="navigateTo('akademik-bk')" class="block w-full text-left px-3 py-2 text-xs sm:text-sm rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Bimbingan Konseling (BK)</button>
                         </div>
                     </div>
 
@@ -104,11 +109,11 @@
                             Kesiswaan <i class="fa-solid fa-chevron-down text-[10px] opacity-70"></i>
                         </button>
                         <div id="dropdown-kesiswaan" class="dropdown-menu absolute left-0 mt-1 w-52 bg-white rounded-xl shadow-xl border border-slate-100 hidden group-hover:block transition-all duration-150 p-2 z-50">
-                            <button type="button" onclick="navigateTo('kesiswaan-spmb')" class="block w-full text-left px-3 py-2 text-xs rounded-lg hover:bg-brand-50 hover:text-brand-600 font-bold text-brand-600">Portal SPMB / PPDB</button>
-                            <button type="button" onclick="navigateTo('kesiswaan-prestasi')" class="block w-full text-left px-3 py-2 text-xs rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Prestasi Siswa</button>
-                            <button type="button" onclick="navigateTo('kesiswaan-osis')" class="block w-full text-left px-3 py-2 text-xs rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">OSIS & MPK</button>
-                            <button type="button" onclick="navigateTo('kesiswaan-ekskul')" class="block w-full text-left px-3 py-2 text-xs rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Ekstrakulikuler</button>
-                            <button type="button" onclick="navigateTo('kesiswaan-tatatertib')" class="block w-full text-left px-3 py-2 text-xs rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Tata Tertib Sekolah</button>
+                            <button type="button" onclick="navigateTo('kesiswaan-spmb')" class="block w-full text-left px-3 py-2 text-xs sm:text-sm rounded-lg hover:bg-brand-50 hover:text-brand-600 font-bold text-brand-600">Portal SPMB / PPDB</button>
+                            <button type="button" onclick="navigateTo('kesiswaan-prestasi')" class="block w-full text-left px-3 py-2 text-xs sm:text-sm rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Prestasi Siswa</button>
+                            <button type="button" onclick="navigateTo('kesiswaan-osis')" class="block w-full text-left px-3 py-2 text-xs sm:text-sm rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">OSIS & MPK</button>
+                            <button type="button" onclick="navigateTo('kesiswaan-ekskul')" class="block w-full text-left px-3 py-2 text-xs sm:text-sm rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Ekstrakulikuler</button>
+                            <button type="button" onclick="navigateTo('kesiswaan-tatatertib')" class="block w-full text-left px-3 py-2 text-xs sm:text-sm rounded-lg hover:bg-brand-50 hover:text-brand-600 font-medium text-slate-700">Tata Tertib Sekolah</button>
                         </div>
                     </div>
 
@@ -124,41 +129,66 @@
                     </button>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <button type="button" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none">
-                    <i class="fa-solid fa-bars text-lg sm:text-xl"></i>
+                <!-- Mobile Menu Hamburger Button -->
+                <button type="button" onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none border border-slate-200 shadow-sm active:scale-95 transition">
+                    <i class="fa-solid fa-bars text-lg"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Drawer Navigation -->
-        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-100 bg-white px-4 pt-3 pb-6 space-y-2 max-h-[80vh] overflow-y-auto shadow-xl relative z-50">
-            <button type="button" onclick="navigateTo('beranda')" class="block w-full text-left px-3 py-2 text-sm font-semibold rounded-lg hover:bg-brand-50">Beranda</button>
+        <!-- Aesthetic Mobile Drawer Navigation -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-100 bg-white px-4 pt-4 pb-8 space-y-3 max-h-[85vh] overflow-y-auto shadow-2xl relative z-50 rounded-b-3xl">
+            <button type="button" onclick="navigateTo('beranda')" class="flex items-center gap-3 w-full text-left px-4 py-3 text-sm font-bold text-slate-900 bg-slate-50 hover:bg-brand-50 hover:text-brand-600 rounded-xl transition border border-slate-100">
+                <i class="fa-solid fa-house text-brand-500"></i> Beranda
+            </button>
             
-            <div class="pl-3 space-y-1 text-xs sm:text-sm text-slate-600 border-l-2 border-brand-200 ml-2">
-                <div class="font-bold text-[10px] sm:text-xs text-slate-400 uppercase py-1">Profil</div>
-                <button type="button" onclick="navigateTo('profil-sejarah')" class="block w-full text-left py-1 hover:text-brand-600">Sejarah Singkat</button>
-                <button type="button" onclick="navigateTo('profil-visi-misi')" class="block w-full text-left py-1 hover:text-brand-600">Visi & Misi</button>
-                <button type="button" onclick="navigateTo('profil-struktur')" class="block w-full text-left py-1 hover:text-brand-600">Struktur Organisasi</button>
-                <button type="button" onclick="navigateTo('profil-program')" class="block w-full text-left py-1 hover:text-brand-600">Program Unggulan</button>
-                <button type="button" onclick="navigateTo('profil-akreditasi')" class="block w-full text-left py-1 hover:text-brand-600">Akreditasi & Dapodik</button>
-                <button type="button" onclick="navigateTo('profil-komite')" class="block w-full text-left py-1 hover:text-brand-600">Komite Sekolah</button>
+            <!-- Profil Card Mobile Menu -->
+            <div class="bg-slate-50/80 rounded-2xl p-3 border border-slate-100 space-y-2">
+                <div class="flex items-center gap-2 text-xs font-bold text-brand-600 uppercase tracking-wider px-2 pt-1">
+                    <i class="fa-solid fa-school"></i> Profil Sekolah
+                </div>
+                <div class="grid grid-cols-1 gap-1 pl-1">
+                    <button type="button" onclick="navigateTo('profil-sejarah')" class="w-full text-left px-3 py-2 text-xs sm:text-sm text-slate-700 font-medium rounded-lg hover:bg-white hover:text-brand-600 transition">Sejarah Singkat</button>
+                    <button type="button" onclick="navigateTo('profil-visi-misi')" class="w-full text-left px-3 py-2 text-xs sm:text-sm text-slate-700 font-medium rounded-lg hover:bg-white hover:text-brand-600 transition">Visi & Misi</button>
+                    <button type="button" onclick="navigateTo('profil-struktur')" class="w-full text-left px-3 py-2 text-xs sm:text-sm text-slate-700 font-medium rounded-lg hover:bg-white hover:text-brand-600 transition">Struktur Organisasi</button>
+                    <button type="button" onclick="navigateTo('profil-program')" class="w-full text-left px-3 py-2 text-xs sm:text-sm text-slate-700 font-medium rounded-lg hover:bg-white hover:text-brand-600 transition">Program Unggulan</button>
+                    <button type="button" onclick="navigateTo('profil-akreditasi')" class="w-full text-left px-3 py-2 text-xs sm:text-sm text-slate-700 font-medium rounded-lg hover:bg-white hover:text-brand-600 transition">Akreditasi & Dapodik</button>
+                    <button type="button" onclick="navigateTo('profil-komite')" class="w-full text-left px-3 py-2 text-xs sm:text-sm text-slate-700 font-medium rounded-lg hover:bg-white hover:text-brand-600 transition">Komite Sekolah</button>
+                </div>
             </div>
 
-            <div class="pl-3 space-y-1 text-xs sm:text-sm text-slate-600 border-l-2 border-brand-200 ml-2">
-                <div class="font-bold text-[10px] sm:text-xs text-slate-400 uppercase py-1">Akademik & Kesiswaan</div>
-                <button type="button" onclick="navigateTo('akademik-kurikulum')" class="block w-full text-left py-1 hover:text-brand-600">Kurikulum Merdeka</button>
-                <button type="button" onclick="navigateTo('akademik-mapel')" class="block w-full text-left py-1 hover:text-brand-600">Daftar Mata Pelajaran</button>
-                <button type="button" onclick="navigateTo('akademik-bk')" class="block w-full text-left py-1 hover:text-brand-600">Bimbingan Konseling</button>
-                <button type="button" onclick="navigateTo('kesiswaan-spmb')" class="block w-full text-left py-1 font-semibold text-brand-600">Portal SPMB / PPDB</button>
-                <button type="button" onclick="navigateTo('kesiswaan-prestasi')" class="block w-full text-left py-1 hover:text-brand-600">Prestasi Siswa</button>
-                <button type="button" onclick="navigateTo('kesiswaan-ekskul')" class="block w-full text-left py-1 hover:text-brand-600">Ekstrakulikuler</button>
+            <!-- Akademik & Kesiswaan Mobile Menu -->
+            <div class="bg-slate-50/80 rounded-2xl p-3 border border-slate-100 space-y-2">
+                <div class="flex items-center gap-2 text-xs font-bold text-brand-600 uppercase tracking-wider px-2 pt-1">
+                    <i class="fa-solid fa-graduation-cap"></i> Akademik & Kesiswaan
+                </div>
+                <div class="grid grid-cols-1 gap-1 pl-1">
+                    <button type="button" onclick="navigateTo('akademik-kurikulum')" class="w-full text-left px-3 py-2 text-xs sm:text-sm text-slate-700 font-medium rounded-lg hover:bg-white hover:text-brand-600 transition">Kurikulum Merdeka</button>
+                    <button type="button" onclick="navigateTo('akademik-mapel')" class="w-full text-left px-3 py-2 text-xs sm:text-sm text-slate-700 font-medium rounded-lg hover:bg-white hover:text-brand-600 transition">Daftar Mata Pelajaran</button>
+                    <button type="button" onclick="navigateTo('akademik-bk')" class="w-full text-left px-3 py-2 text-xs sm:text-sm text-slate-700 font-medium rounded-lg hover:bg-white hover:text-brand-600 transition">Bimbingan Konseling</button>
+                    <button type="button" onclick="navigateTo('kesiswaan-spmb')" class="w-full text-left px-3 py-2 text-xs sm:text-sm text-brand-600 font-bold rounded-lg hover:bg-white transition bg-brand-50/50">Portal SPMB / PPDB</button>
+                    <button type="button" onclick="navigateTo('kesiswaan-prestasi')" class="w-full text-left px-3 py-2 text-xs sm:text-sm text-slate-700 font-medium rounded-lg hover:bg-white hover:text-brand-600 transition">Prestasi Siswa</button>
+                    <button type="button" onclick="navigateTo('kesiswaan-ekskul')" class="w-full text-left px-3 py-2 text-xs sm:text-sm text-slate-700 font-medium rounded-lg hover:bg-white hover:text-brand-600 transition">Ekstrakulikuler</button>
+                </div>
             </div>
 
-            <button type="button" onclick="navigateTo('gtk')" class="block w-full text-left px-3 py-2 text-sm font-semibold rounded-lg hover:bg-brand-50">GTK (Guru & Staf)</button>
-            <button type="button" onclick="navigateTo('sarpras')" class="block w-full text-left px-3 py-2 text-sm font-semibold rounded-lg hover:bg-brand-50">Sarana Prasarana</button>
-            <button type="button" onclick="navigateTo('lulusan')" class="block w-full text-left px-3 py-2 text-sm font-semibold rounded-lg hover:bg-brand-50">Profil Lulusan</button>
-            <button type="button" onclick="navigateTo('pengaduan')" class="w-full mt-3 bg-brand-500 text-white font-semibold text-sm px-4 py-2.5 rounded-xl shadow text-center block">Layanan Pengaduan</button>
+            <!-- Direktori & Sarpras Mobile Menu -->
+            <div class="grid grid-cols-2 gap-2">
+                <button type="button" onclick="navigateTo('gtk')" class="px-3 py-2.5 text-xs sm:text-sm font-semibold rounded-xl bg-slate-50 border border-slate-100 hover:bg-brand-50 hover:text-brand-600 text-center transition">
+                    <i class="fa-solid fa-chalkboard-user block mb-1 text-brand-500 text-sm"></i> GTK & Guru
+                </button>
+                <button type="button" onclick="navigateTo('sarpras')" class="px-3 py-2.5 text-xs sm:text-sm font-semibold rounded-xl bg-slate-50 border border-slate-100 hover:bg-brand-50 hover:text-brand-600 text-center transition">
+                    <i class="fa-solid fa-building block mb-1 text-brand-500 text-sm"></i> Sarpras
+                </button>
+            </div>
+
+            <button type="button" onclick="navigateTo('lulusan')" class="flex items-center gap-3 w-full text-left px-4 py-3 text-xs sm:text-sm font-semibold text-slate-800 bg-slate-50 hover:bg-brand-50 rounded-xl transition border border-slate-100">
+                <i class="fa-solid fa-user-graduate text-brand-500"></i> Profil Lulusan & Alumni
+            </button>
+
+            <button type="button" onclick="navigateTo('pengaduan')" class="w-full mt-2 bg-brand-500 hover:bg-brand-600 text-white font-bold text-sm px-4 py-3 rounded-xl shadow-lg shadow-brand-500/20 text-center flex items-center justify-center gap-2">
+                <i class="fa-solid fa-bullhorn text-xs"></i> Layanan Pengaduan (WA)
+            </button>
         </div>
     </header>
 
@@ -166,32 +196,34 @@
 
         <!-- 1. SEKSI BERANDA -->
         <div id="beranda" class="page-section active">
-            <!-- Hero Banner Section -->
-            <section class="relative bg-slate-900 text-white overflow-hidden py-12 sm:py-24 lg:py-36">
+            <!-- Hero Banner Section (Fully Centered) -->
+            <section class="relative bg-slate-900 text-white overflow-hidden py-14 sm:py-24 lg:py-36">
                 <div class="absolute inset-0 z-0">
                     <img id="hero-bg-img" src="https://lh3.googleusercontent.com/d/1DqqeKbhR8xQP6iVPfH8C_rtMk8bok50Y" alt="Gedung SMAN 54 Wonogiri" class="w-full h-full object-cover object-center opacity-40 scale-105" 
                          onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1DqqeKbhR8xQP6iVPfH8C_rtMk8bok50Y&sz=w1600';">
-                    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/80 to-slate-900/30"></div>
+                    <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-900/80 to-slate-900/90"></div>
                 </div>
 
-                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="max-w-3xl">
-                        <!-- Custom Sharp-Corner Rectangle Badge Persis SMA 3 Palu -->
-                        <div class="inline-block bg-[#c2410c] text-white font-extrabold text-[10px] sm:text-xs uppercase tracking-widest px-3 py-1 sm:px-4 sm:py-1.5 rounded-none mb-3 sm:mb-6 shadow-sm">
-                            WEBSITE RESMI
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center">
+                    <div class="max-w-3xl flex flex-col items-center">
+                        <!-- Custom Sharp-Corner Rectangle Badge -->
+                        <div class="inline-block bg-[#c2410c] text-white font-extrabold text-xs sm:text-xs uppercase tracking-widest px-4 py-1.5 rounded-none mb-4 sm:mb-6 shadow-md mx-auto">
+                            Website Resmi
                         </div>
                         
-                        <h1 id="hero-title" class="text-2xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white mb-3 sm:mb-6">
+                        <h1 id="hero-title" class="text-2xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white mb-3 sm:mb-6 text-center">
                             SMA Negeri 54 Wonogiri
                         </h1>
-                        <p id="hero-motto" class="text-xs sm:text-lg lg:text-xl text-slate-300 leading-relaxed font-normal mb-5 sm:mb-8 max-w-2xl line-clamp-3 sm:line-clamp-none">
+                        <p id="hero-motto" class="text-sm sm:text-lg lg:text-xl text-slate-200 leading-relaxed font-normal mb-6 sm:mb-8 max-w-2xl text-center">
                             Mencetak generasi cerdas, berkarakter luhur, dan berdaya saing global melalui pendidikan berkualitas yang berwawasan lingkungan di Kabupaten Wonogiri.
                         </p>
-                        <div class="flex flex-wrap items-center gap-3 sm:gap-4">
-                            <button type="button" onclick="navigateTo('kesiswaan-spmb')" class="bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs sm:text-base px-5 py-2.5 sm:px-7 sm:py-3.5 rounded-xl shadow-lg shadow-brand-500/30 transition-all flex items-center gap-2 transform hover:-translate-y-0.5">
+
+                        <!-- Centered Dual Action Buttons -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
+                            <button type="button" onclick="navigateTo('kesiswaan-spmb')" class="w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white font-bold text-sm sm:text-base px-6 py-3 sm:px-7 sm:py-3.5 rounded-xl shadow-lg shadow-brand-500/30 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-0.5">
                                 Info Pendaftaran <i class="fa-solid fa-arrow-right text-xs"></i>
                             </button>
-                            <button type="button" onclick="navigateTo('profil-sejarah')" class="bg-white/10 hover:bg-white/20 text-white font-semibold text-xs sm:text-base px-5 py-2.5 sm:px-7 sm:py-3.5 rounded-xl backdrop-blur-sm border border-white/20 transition">
+                            <button type="button" onclick="navigateTo('profil-sejarah')" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white font-semibold text-sm sm:text-base px-6 py-3 sm:px-7 sm:py-3.5 rounded-xl backdrop-blur-sm border border-white/20 transition">
                                 Jelajahi Sekolah
                             </button>
                         </div>
@@ -204,24 +236,24 @@
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-12 items-center">
                         <div class="lg:col-span-5 relative">
-                            <div class="relative mx-auto max-w-[220px] sm:max-w-sm rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-sky-100 p-1.5 sm:p-2">
+                            <div class="relative mx-auto max-w-[240px] sm:max-w-sm rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-sky-100 p-2">
                                 <img id="kepsek-img" src="https://lh3.googleusercontent.com/d/13Vg2YyDqNqYgeiIZ5kL1SMqjVdNEX7Z9" alt="Kepala Sekolah SMAN 54 Wonogiri" class="w-full h-auto object-cover rounded-xl"
                                      onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=13Vg2YyDqNqYgeiIZ5kL1SMqjVdNEX7Z9&sz=w800';">
-                                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-transparent p-3 sm:p-6 text-white text-center">
+                                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-transparent p-4 sm:p-6 text-white text-center">
                                     <h4 id="kepsek-nama" class="font-bold text-sm sm:text-lg">Dr. H. Anies Rasyid Baswedan, M.Pd.</h4>
-                                    <p id="kepsek-jabatan" class="text-[10px] sm:text-xs text-brand-300 font-medium">Kepala SMA Negeri 54 Wonogiri</p>
+                                    <p id="kepsek-jabatan" class="text-xs text-brand-300 font-medium">Kepala SMA Negeri 54 Wonogiri</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="lg:col-span-7">
-                            <div class="inline-block border-l-4 border-brand-500 pl-2.5 mb-2 sm:mb-4">
-                                <span class="text-[10px] sm:text-xs font-bold text-brand-600 uppercase tracking-wider">SAMBUTAN KEPALA SEKOLAH</span>
+                            <div class="inline-block border-l-4 border-brand-500 pl-3 mb-3">
+                                <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">SAMBUTAN KEPALA SEKOLAH</span>
                             </div>
-                            <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-3 sm:mb-6">
+                            <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-4 sm:mb-6">
                                 Mewujudkan Generasi Emas SMA Negeri 54 Wonogiri
                             </h2>
-                            <div id="kepsek-sambutan-body" class="prose prose-slate text-xs sm:text-sm leading-relaxed text-slate-600 space-y-2 sm:space-y-4">
+                            <div id="kepsek-sambutan-body" class="prose prose-slate text-xs sm:text-sm leading-relaxed text-slate-600 space-y-3 sm:space-y-4">
                                 <!-- Dynamic Sambutan Text -->
                             </div>
                         </div>
@@ -234,14 +266,14 @@
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-6 sm:mb-12">
                         <div>
-                            <div class="inline-block border-l-4 border-brand-500 pl-2.5 mb-1 sm:mb-2">
-                                <span class="text-[10px] sm:text-xs font-bold text-brand-600 uppercase tracking-wider">BUDAYA & TRADISI</span>
+                            <div class="inline-block border-l-4 border-brand-500 pl-3 mb-2">
+                                <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">BUDAYA & TRADISI</span>
                             </div>
                             <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Aktivitas Siswa</h2>
-                            <p class="text-slate-500 text-xs sm:text-sm mt-0.5 sm:mt-1">Membangun karakter unggul melalui pelestarian budaya, tradisi positif, dan penanaman nilai moral.</p>
+                            <p class="text-slate-500 text-xs sm:text-sm mt-1">Membangun karakter unggul melalui pelestarian budaya, tradisi positif, dan penanaman nilai moral.</p>
                         </div>
-                        <button type="button" onclick="navigateTo('kesiswaan-ekskul')" class="mt-2 sm:mt-0 text-brand-600 font-bold text-xs sm:text-sm hover:text-brand-700 flex items-center gap-1 group">
-                            Jelajahi Aktivitas <i class="fa-solid fa-arrow-right text-[10px] sm:text-xs group-hover:translate-x-1 transition-transform"></i>
+                        <button type="button" onclick="navigateTo('kesiswaan-ekskul')" class="mt-3 sm:mt-0 text-brand-600 font-bold text-xs sm:text-sm hover:text-brand-700 flex items-center gap-1 group">
+                            Jelajahi Aktivitas <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
                         </button>
                     </div>
 
@@ -255,34 +287,34 @@
             <!-- Statistik Pengunjung -->
             <section class="py-8 sm:py-16 bg-white border-y border-slate-100">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <div class="inline-block border-b-2 border-brand-500 pb-0.5 mb-1 sm:mb-2">
-                        <span class="text-[10px] sm:text-xs font-bold text-brand-600 uppercase tracking-wider">STATISTIK</span>
+                    <div class="inline-block border-b-2 border-brand-500 pb-1 mb-2">
+                        <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">STATISTIK</span>
                     </div>
                     <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900 mb-6 sm:mb-10">Pengunjung Website</h2>
 
-                    <div class="grid grid-cols-3 gap-2 sm:gap-6 max-w-4xl mx-auto">
-                        <div class="bg-slate-50 p-3 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-100 flex flex-col items-center">
-                            <div class="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center mb-1.5 sm:mb-3 text-xs sm:text-xl">
+                    <div class="grid grid-cols-3 gap-3 sm:gap-6 max-w-4xl mx-auto">
+                        <div class="bg-slate-50 p-4 sm:p-6 rounded-2xl border border-slate-100 flex flex-col items-center">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center mb-2 sm:mb-3 text-sm sm:text-xl">
                                 <i class="fa-regular fa-clock"></i>
                             </div>
-                            <span class="text-[9px] sm:text-xs font-bold text-slate-400 tracking-wider uppercase mb-0.5">HARI INI</span>
-                            <span id="stat-hari-ini" class="text-base sm:text-4xl font-extrabold text-slate-900">74</span>
+                            <span class="text-[10px] sm:text-xs font-bold text-slate-400 tracking-wider uppercase mb-1">HARI INI</span>
+                            <span id="stat-hari-ini" class="text-lg sm:text-4xl font-extrabold text-slate-900">74</span>
                         </div>
 
-                        <div class="bg-slate-50 p-3 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-100 flex flex-col items-center">
-                            <div class="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center mb-1.5 sm:mb-3 text-xs sm:text-xl">
+                        <div class="bg-slate-50 p-4 sm:p-6 rounded-2xl border border-slate-100 flex flex-col items-center">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center mb-2 sm:mb-3 text-sm sm:text-xl">
                                 <i class="fa-regular fa-calendar-days"></i>
                             </div>
-                            <span class="text-[9px] sm:text-xs font-bold text-slate-400 tracking-wider uppercase mb-0.5">BULAN INI</span>
-                            <span id="stat-bulan-ini" class="text-base sm:text-4xl font-extrabold text-slate-900">2,261</span>
+                            <span class="text-[10px] sm:text-xs font-bold text-slate-400 tracking-wider uppercase mb-1">BULAN INI</span>
+                            <span id="stat-bulan-ini" class="text-lg sm:text-4xl font-extrabold text-slate-900">2,261</span>
                         </div>
 
-                        <div class="bg-slate-50 p-3 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-100 flex flex-col items-center">
-                            <div class="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-1.5 sm:mb-3 text-xs sm:text-xl">
+                        <div class="bg-slate-50 p-4 sm:p-6 rounded-2xl border border-slate-100 flex flex-col items-center">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-2 sm:mb-3 text-sm sm:text-xl">
                                 <i class="fa-solid fa-chart-line"></i>
                             </div>
-                            <span class="text-[9px] sm:text-xs font-bold text-slate-400 tracking-wider uppercase mb-0.5">TAHUN INI</span>
-                            <span id="stat-tahun-ini" class="text-base sm:text-4xl font-extrabold text-slate-900">3,006</span>
+                            <span class="text-[10px] sm:text-xs font-bold text-slate-400 tracking-wider uppercase mb-1">TAHUN INI</span>
+                            <span id="stat-tahun-ini" class="text-lg sm:text-4xl font-extrabold text-slate-900">3,006</span>
                         </div>
                     </div>
                 </div>
@@ -295,11 +327,11 @@
                 </div>
                 <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6">
                     <div>
-                        <span class="text-[10px] sm:text-xs font-bold text-brand-400 uppercase tracking-widest">PORTAL PENDAFTARAN</span>
-                        <h3 class="text-xl sm:text-3xl font-extrabold text-white mt-0.5 sm:mt-1">Penerimaan Peserta Didik Baru (PPDB)</h3>
+                        <span class="text-xs font-bold text-brand-400 uppercase tracking-widest">PORTAL PENDAFTARAN</span>
+                        <h3 class="text-xl sm:text-3xl font-extrabold text-white mt-1">Penerimaan Peserta Didik Baru (PPDB)</h3>
                         <p class="text-slate-300 text-xs sm:text-sm mt-1 sm:mt-2 max-w-2xl">Bergabunglah bersama keluarga besar SMA Negeri 54 Wonogiri. Temukan informasi lengkap mengenai alur, syarat, dan jadwal pendaftaran.</p>
                     </div>
-                    <button type="button" onclick="navigateTo('kesiswaan-spmb')" class="bg-brand-400 hover:bg-brand-500 text-slate-950 font-bold text-xs sm:text-sm px-5 py-2.5 sm:px-6 sm:py-3.5 rounded-xl transition shrink-0 flex items-center gap-2">
+                    <button type="button" onclick="navigateTo('kesiswaan-spmb')" class="bg-brand-400 hover:bg-brand-500 text-slate-950 font-bold text-xs sm:text-sm px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl transition shrink-0 flex items-center gap-2">
                         Masuk Portal SPMB <i class="fa-solid fa-arrow-right text-xs"></i>
                     </button>
                 </div>
@@ -310,11 +342,11 @@
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex items-end justify-between mb-6 sm:mb-12">
                         <div>
-                            <div class="inline-block border-l-4 border-brand-500 pl-2.5 mb-1 sm:mb-2">
-                                <span class="text-[10px] sm:text-xs font-bold text-brand-600 uppercase tracking-wider">PUSAT INFORMASI</span>
+                            <div class="inline-block border-l-4 border-brand-500 pl-3 mb-2">
+                                <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">PUSAT INFORMASI</span>
                             </div>
                             <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Berita & Prestasi Terkini</h2>
-                            <p class="text-slate-500 text-xs sm:text-sm mt-0.5 sm:mt-1">Informasi terkini dari dunia pendidikan dan pembaruan prestasi siswa SMA Negeri 54 Wonogiri.</p>
+                            <p class="text-slate-500 text-xs sm:text-sm mt-1">Informasi terkini dari dunia pendidikan dan pembaruan prestasi siswa SMA Negeri 54 Wonogiri.</p>
                         </div>
                         <button type="button" onclick="navigateTo('kesiswaan-prestasi')" class="text-brand-600 font-bold text-xs sm:text-sm hover:text-brand-700 flex items-center gap-1 shrink-0">
                             Berita Selengkapnya &rarr;
@@ -338,13 +370,13 @@
 
         <!-- DEDICATED FULL ARTICLE READING VIEW -->
         <div id="halaman-artikel" class="page-section max-w-4xl mx-auto px-4 py-8 sm:py-16">
-            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-6 sm:mb-8 transition">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-4 py-2.5 rounded-xl mb-6 sm:mb-8 transition">
                 <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
             </button>
             
             <article class="bg-white p-5 sm:p-10 rounded-2xl sm:rounded-3xl border border-slate-100 shadow-sm">
-                <div class="flex items-center gap-2 sm:gap-3 text-[11px] sm:text-xs text-slate-400 mb-3 sm:mb-4">
-                    <span id="art-tag" class="bg-brand-500 text-white font-bold px-2.5 py-0.5 rounded text-[10px] sm:text-[11px] uppercase">BERITA</span>
+                <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-xs text-slate-400 mb-3 sm:mb-4">
+                    <span id="art-tag" class="bg-brand-500 text-white font-bold px-2.5 py-1 rounded text-xs uppercase">BERITA</span>
                     <span id="art-date"><i class="fa-regular fa-calendar mr-1"></i> 24 Agustus 2026</span>
                     <span id="art-author"><i class="fa-regular fa-user mr-1"></i> Admin Sekolah</span>
                 </div>
@@ -357,7 +389,7 @@
                     <img id="art-img" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1000" class="w-full h-56 sm:h-96 object-cover">
                 </div>
 
-                <div id="art-body" class="prose prose-slate max-w-none text-slate-700 text-xs sm:text-base leading-relaxed space-y-4 sm:space-y-6">
+                <div id="art-body" class="prose prose-slate max-w-none text-slate-700 text-sm sm:text-base leading-relaxed space-y-4 sm:space-y-6">
                     <!-- Dynamic Body Content -->
                 </div>
             </article>
@@ -407,7 +439,7 @@
             <div class="bg-white p-5 sm:p-8 rounded-2xl border border-slate-100 shadow-sm flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
                 <div class="w-24 h-24 sm:w-32 sm:h-32 bg-brand-500 text-white rounded-2xl flex flex-col items-center justify-center font-extrabold shrink-0 shadow-lg">
                     <span class="text-3xl sm:text-5xl">A</span>
-                    <span class="text-[9px] sm:text-[10px] tracking-widest uppercase">Unggul</span>
+                    <span class="text-[10px] tracking-widest uppercase">Unggul</span>
                 </div>
                 <div class="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-slate-600 text-center sm:text-left">
                     <p><strong class="text-slate-900">NPSN:</strong> <span id="akreditasi-npsn">20395400</span></p>
@@ -438,13 +470,13 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-100 shadow-sm">
                     <h4 class="font-bold text-slate-900 mb-2 sm:mb-3 text-sm sm:text-base">Kelompok Mata Pelajaran Umum</h4>
-                    <ul id="mapel-umum-list" class="list-disc list-inside text-xs text-slate-600 space-y-1 sm:space-y-1.5 leading-relaxed">
+                    <ul id="mapel-umum-list" class="list-disc list-inside text-xs sm:text-sm text-slate-600 space-y-1.5 leading-relaxed">
                         <!-- Dynamic List -->
                     </ul>
                 </div>
                 <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-100 shadow-sm">
                     <h4 class="font-bold text-slate-900 mb-2 sm:mb-3 text-sm sm:text-base">Kelompok Peminatan Sains & Humaniora</h4>
-                    <ul id="mapel-peminatan-list" class="list-disc list-inside text-xs text-slate-600 space-y-1 sm:space-y-1.5 leading-relaxed">
+                    <ul id="mapel-peminatan-list" class="list-disc list-inside text-xs sm:text-sm text-slate-600 space-y-1.5 leading-relaxed">
                         <!-- Dynamic List -->
                     </ul>
                 </div>
@@ -463,11 +495,11 @@
             <div class="bg-white p-5 sm:p-8 rounded-2xl border border-slate-100 shadow-sm space-y-4 sm:space-y-6">
                 <div class="bg-brand-50 p-4 sm:p-6 rounded-xl border border-brand-200">
                     <h4 class="font-bold text-brand-900 text-sm sm:text-lg">Informasi Pendaftaran Siswa Baru TA 2026/2027</h4>
-                    <p id="spmb-info-text" class="text-xs text-brand-800 mt-1 leading-relaxed">Pendaftaran siswa baru SMA Negeri 54 Wonogiri dibuka melalui 4 jalur: Jalur Zonasi, Jalur Prestasi, Jalur Afirmasi, dan Jalur Perpindahan Tugas Orang Tua.</p>
+                    <p id="spmb-info-text" class="text-xs sm:text-sm text-brand-800 mt-1 leading-relaxed">Pendaftaran siswa baru SMA Negeri 54 Wonogiri dibuka melalui 4 jalur: Jalur Zonasi, Jalur Prestasi, Jalur Afirmasi, dan Jalur Perpindahan Tugas Orang Tua.</p>
                 </div>
                 <div class="space-y-2 sm:space-y-3">
-                    <h4 class="font-bold text-slate-900 text-xs sm:text-base">Persyaratan Berkas Pendaftaran:</h4>
-                    <ul id="spmb-syarat-list" class="list-disc list-inside text-xs text-slate-600 space-y-1 sm:space-y-1.5 leading-relaxed">
+                    <h4 class="font-bold text-slate-900 text-sm sm:text-base">Persyaratan Berkas Pendaftaran:</h4>
+                    <ul id="spmb-syarat-list" class="list-disc list-inside text-xs sm:text-sm text-slate-600 space-y-1.5 leading-relaxed">
                         <!-- Dynamic Syarat -->
                     </ul>
                 </div>
@@ -490,7 +522,7 @@
 
         <div id="kesiswaan-ekskul" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
             <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900 mb-4 sm:mb-6 border-l-4 border-brand-500 pl-3 sm:pl-4">Ekstrakulikuler Unggulan</h2>
-            <div id="ekskul-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2.5 sm:gap-4">
+            <div id="ekskul-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
                 <!-- Dynamic Ekskul Cards -->
             </div>
         </div>
@@ -507,9 +539,9 @@
             <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 sm:mb-8 gap-3 sm:gap-4">
                 <div>
                     <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900 border-l-4 border-brand-500 pl-3 sm:pl-4">Direktori Guru & GTK</h2>
-                    <p class="text-[11px] sm:text-xs text-slate-500 mt-0.5">Tenaga pendidik dan kependidikan profesional SMA Negeri 54 Wonogiri.</p>
+                    <p class="text-xs text-slate-500 mt-1">Tenaga pendidik dan kependidikan profesional SMA Negeri 54 Wonogiri.</p>
                 </div>
-                <input type="text" id="search-gtk" onkeyup="filterGTK()" placeholder="Cari nama guru atau mata pelajaran..." class="px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm w-full md:w-80 focus:outline-none focus:border-brand-500">
+                <input type="text" id="search-gtk" onkeyup="filterGTK()" placeholder="Cari nama guru atau mata pelajaran..." class="px-4 py-3 rounded-xl border border-slate-200 text-xs sm:text-sm w-full md:w-80 focus:outline-none focus:border-brand-500">
             </div>
 
             <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6" id="gtk-grid">
@@ -528,40 +560,38 @@
         <div id="lulusan" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
             <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900 mb-4 sm:mb-6 border-l-4 border-brand-500 pl-3 sm:pl-4">Profil Lulusan & Sebaran Alumni</h2>
             <div class="bg-white p-5 sm:p-8 rounded-2xl border border-slate-100 shadow-sm text-center">
-                <div class="grid grid-cols-3 gap-2 sm:gap-6 mb-4 sm:mb-6">
-                    <div class="p-3 sm:p-4 bg-brand-50 rounded-xl"><span id="lulusan-ptn" class="block text-xl sm:text-3xl font-bold text-brand-600">82%</span><span class="text-[10px] sm:text-xs text-slate-600 font-semibold">Diterima PTN / PTS</span></div>
-                    <div class="p-3 sm:p-4 bg-brand-50 rounded-xl"><span id="lulusan-kedinasan" class="block text-xl sm:text-3xl font-bold text-brand-600">12%</span><span class="text-[10px] sm:text-xs text-slate-600 font-semibold">Kedinasan / TNI-POLRI</span></div>
-                    <div class="p-3 sm:p-4 bg-brand-50 rounded-xl"><span id="lulusan-kerja" class="block text-xl sm:text-3xl font-bold text-brand-600">6%</span><span class="text-[10px] sm:text-xs text-slate-600 font-semibold">Wirausaha & Kerja</span></div>
+                <div class="grid grid-cols-3 gap-3 sm:gap-6 mb-4 sm:mb-6">
+                    <div class="p-3 sm:p-4 bg-brand-50 rounded-xl"><span id="lulusan-ptn" class="block text-xl sm:text-3xl font-bold text-brand-600">82%</span><span class="text-xs text-slate-600 font-semibold">Diterima PTN / PTS</span></div>
+                    <div class="p-3 sm:p-4 bg-brand-50 rounded-xl"><span id="lulusan-kedinasan" class="block text-xl sm:text-3xl font-bold text-brand-600">12%</span><span class="text-xs text-slate-600 font-semibold">Kedinasan / TNI-POLRI</span></div>
+                    <div class="p-3 sm:p-4 bg-brand-50 rounded-xl"><span id="lulusan-kerja" class="block text-xl sm:text-3xl font-bold text-brand-600">6%</span><span class="text-xs text-slate-600 font-semibold">Wirausaha & Kerja</span></div>
                 </div>
             </div>
         </div>
 
-        <!-- 6. LAYANAN PENGADUAN & DASHBOARD ADMIN -->
+        <!-- 6. LAYANAN PENGADUAN (DIRECT TO WHATSAPP) -->
         <div id="pengaduan" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
             <div class="max-w-3xl mx-auto">
-                <div class="flex items-center justify-between mb-6 sm:mb-8">
-                    <div>
-                        <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900">Layanan Pengaduan Sekolah</h2>
-                        <p class="text-slate-500 text-xs sm:text-sm mt-0.5">Sampaikan masukan, saran, atau aduan Anda secara aman.</p>
+                <div class="mb-6 sm:mb-8 text-center sm:text-left">
+                    <div class="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full mb-2">
+                        <i class="fa-brands fa-whatsapp text-sm mr-1"></i> Respon Cepat WhatsApp
                     </div>
-                    <button type="button" onclick="openAdminModal()" class="text-[10px] sm:text-xs bg-slate-900 text-white font-semibold px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-xl hover:bg-slate-800 transition">
-                        <i class="fa-solid fa-lock text-[10px] mr-1"></i> Admin Login
-                    </button>
+                    <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900">Layanan Pengaduan Sekolah</h2>
+                    <p class="text-slate-500 text-xs sm:text-sm mt-1">Sampaikan aduan, masukan, atau aspirasi Anda langsung ke nomor resmi WhatsApp sekolah.</p>
                 </div>
 
-                <!-- Form Pengaduan -->
-                <form id="form-pengaduan" onsubmit="submitAduan(event)" class="bg-white p-5 sm:p-8 rounded-2xl border border-slate-100 shadow-sm space-y-4 sm:space-y-5">
+                <!-- Form Pengaduan Direct WA -->
+                <form id="form-pengaduan" onsubmit="submitAduanWA(event)" class="bg-white p-5 sm:p-8 rounded-2xl border border-slate-100 shadow-md space-y-4 sm:space-y-5">
                     <div>
-                        <label class="block text-[10px] sm:text-xs font-bold uppercase text-slate-700 mb-1">Nama Pelapor (Opsional)</label>
-                        <input type="text" id="aduan-nama" placeholder="Ketik nama Anda (Kosongkan jika ingin anonim)" class="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:border-brand-500">
+                        <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Nama Pelapor (Opsional)</label>
+                        <input type="text" id="aduan-nama" placeholder="Ketik nama Anda (Kosongkan jika anonim)" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:border-brand-500">
                     </div>
                     <div>
-                        <label class="block text-[10px] sm:text-xs font-bold uppercase text-slate-700 mb-1">Kontak / No. WhatsApp / Email</label>
-                        <input type="text" id="aduan-kontak" required placeholder="08xxxxxxxxxx atau email aktif" class="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:border-brand-500">
+                        <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Kontak Pelapor (No. HP / Email)</label>
+                        <input type="text" id="aduan-kontak" required placeholder="Contoh: 0856xxxxxxxx" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:border-brand-500">
                     </div>
                     <div>
-                        <label class="block text-[10px] sm:text-xs font-bold uppercase text-slate-700 mb-1">Kategori Laporan</label>
-                        <select id="aduan-kategori" class="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:border-brand-500">
+                        <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Kategori Laporan</label>
+                        <select id="aduan-kategori" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:border-brand-500">
                             <option value="Sarana Prasarana">Sarana Prasarana</option>
                             <option value="Pelayanan Akademik">Pelayanan Akademik</option>
                             <option value="Kesiswaan & Anti-Bullying">Kesiswaan & Pencegahan Perundungan</option>
@@ -569,53 +599,13 @@
                         </select>
                     </div>
                     <div>
-                        <label class="block text-[10px] sm:text-xs font-bold uppercase text-slate-700 mb-1">Isi Laporan Pengaduan</label>
-                        <textarea id="aduan-pesan" rows="3" required placeholder="Tuliskan kronologi, saran, atau detail pengaduan..." class="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:border-brand-500"></textarea>
+                        <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Isi Laporan Pengaduan</label>
+                        <textarea id="aduan-pesan" rows="4" required placeholder="Tuliskan detail kronologi, lokasi, atau masukan Anda..." class="w-full px-4 py-3 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:border-brand-500"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold py-3 sm:py-3.5 text-xs sm:text-sm rounded-xl shadow-md shadow-brand-500/20 transition">
-                        Kirim Laporan Pengaduan
+                    <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 sm:py-4 text-xs sm:text-sm rounded-xl shadow-lg shadow-emerald-600/20 transition flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i> Kirim Laporan Pengaduan via WhatsApp
                     </button>
                 </form>
-            </div>
-        </div>
-
-        <!-- Dashboard Admin Page Section (PIN 12345 Protected) -->
-        <div id="dashboard-admin" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
-            <div class="flex items-center justify-between mb-6 sm:mb-8">
-                <div>
-                    <span class="text-[10px] sm:text-xs font-bold text-brand-600 uppercase tracking-wider">INTERNAL SYSTEM</span>
-                    <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900">Dashboard Admin Pengaduan</h2>
-                </div>
-                <button type="button" onclick="navigateTo('beranda')" class="text-xs text-slate-500 hover:text-slate-900 font-semibold bg-slate-100 px-3 py-1.5 rounded-lg transition">Keluar</button>
-            </div>
-
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden p-4 sm:p-6">
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse text-xs sm:text-sm">
-                        <thead>
-                            <tr class="border-b border-slate-200 bg-slate-50 text-slate-600 text-[10px] sm:text-xs font-bold uppercase">
-                                <th class="p-2 sm:p-3">Tanggal</th>
-                                <th class="p-2 sm:p-3">Pelapor</th>
-                                <th class="p-2 sm:p-3">Kontak</th>
-                                <th class="p-2 sm:p-3">Kategori</th>
-                                <th class="p-2 sm:p-3">Pesan</th>
-                                <th class="p-2 sm:p-3">Status</th>
-                                <th class="p-2 sm:p-3">Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody id="aduan-table-body" class="divide-y divide-slate-100 text-slate-700">
-                            <tr>
-                                <td class="p-2 sm:p-3 text-[10px] sm:text-xs">27/08/2026</td>
-                                <td class="p-2 sm:p-3 font-semibold">Siswa Kelas XI-A</td>
-                                <td class="p-2 sm:p-3 text-[10px] sm:text-xs">08123456789</td>
-                                <td class="p-2 sm:p-3"><span class="bg-amber-100 text-amber-800 text-[9px] sm:text-[10px] font-bold px-1.5 py-0.5 rounded">Sarpras</span></td>
-                                <td class="p-2 sm:p-3 text-[10px] sm:text-xs">Penerangan di lorong lantai 2 barat perlu penggantian lampu.</td>
-                                <td class="p-2 sm:p-3"><span class="bg-yellow-100 text-yellow-800 text-[9px] sm:text-[10px] font-bold px-1.5 py-0.5 rounded">Pending</span></td>
-                                <td class="p-2 sm:p-3"><button type="button" onclick="updateAduanStatus(this)" class="text-xs text-brand-600 font-bold hover:underline">Selesaikan</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
             </div>
         </div>
 
@@ -627,18 +617,18 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-10 pb-8 sm:pb-12 border-b border-slate-800">
                 <div class="col-span-2 md:col-span-1 space-y-3 sm:space-y-4">
                     <div class="flex items-center gap-3">
-                        <img id="footer-logo-img" src="https://lh3.googleusercontent.com/d/1ZD3BQxowpqMtcOIj-glz-XXb9ukhuLYM" alt="Logo SMAN 54 Wonogiri" class="h-9 sm:h-10 w-auto object-contain rounded" 
+                        <img id="footer-logo-img" src="https://lh3.googleusercontent.com/d/1ZD3BQxowpqMtcOIj-glz-XXb9ukhuLYM" alt="Logo SMAN 54 Wonogiri" class="h-10 sm:h-12 w-auto object-contain rounded" 
                              onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1ZD3BQxowpqMtcOIj-glz-XXb9ukhuLYM&sz=w500';">
                         <span id="footer-logo-name" class="font-bold tracking-tight text-base sm:text-lg">SMAN 54 WONOGIRI</span>
                     </div>
-                    <p class="text-[11px] sm:text-xs text-slate-400 leading-relaxed">
+                    <p class="text-xs text-slate-400 leading-relaxed">
                         Mencetak generasi yang unggul dalam IPTEK dan IMTAQ, berwawasan lingkungan, serta mampu bersaing di era global.
                     </p>
                 </div>
 
                 <div>
                     <h4 class="font-bold text-xs sm:text-sm text-white mb-3 sm:mb-4">Tautan Cepat</h4>
-                    <ul class="space-y-1.5 sm:space-y-2 text-[11px] sm:text-xs text-slate-400">
+                    <ul class="space-y-2 text-xs text-slate-400">
                         <li><button type="button" onclick="navigateTo('profil-sejarah')" class="hover:text-brand-400 transition">Profil Sekolah</button></li>
                         <li><button type="button" onclick="navigateTo('profil-visi-misi')" class="hover:text-brand-400 transition">Visi dan Misi</button></li>
                         <li><button type="button" onclick="navigateTo('profil-program')" class="hover:text-brand-400 transition">Program Unggulan</button></li>
@@ -649,7 +639,7 @@
 
                 <div>
                     <h4 class="font-bold text-xs sm:text-sm text-white mb-3 sm:mb-4">Layanan Akademik</h4>
-                    <ul class="space-y-1.5 sm:space-y-2 text-[11px] sm:text-xs text-slate-400">
+                    <ul class="space-y-2 text-xs text-slate-400">
                         <li><button type="button" onclick="navigateTo('lulusan')" class="hover:text-brand-400 transition">Informasi Kelulusan</button></li>
                         <li><button type="button" onclick="navigateTo('kesiswaan-spmb')" class="hover:text-brand-400 transition">Daftar Ulang SPMB</button></li>
                         <li><button type="button" onclick="navigateTo('akademik-kurikulum')" class="hover:text-brand-400 transition">Kurikulum Merdeka</button></li>
@@ -659,14 +649,14 @@
 
                 <div class="col-span-2 md:col-span-1">
                     <h4 class="font-bold text-xs sm:text-sm text-white mb-3 sm:mb-4">Kontak Kami</h4>
-                    <ul class="space-y-2 sm:space-y-3 text-[11px] sm:text-xs text-slate-400">
+                    <ul class="space-y-2.5 sm:space-y-3 text-xs text-slate-400">
                         <li class="flex items-start gap-2">
                             <i class="fa-solid fa-location-dot text-brand-400 mt-0.5"></i>
                             <span id="footer-alamat">Jl. Raya Wonogiri - Pracimantoro KM. 54, Kabupaten Wonogiri, Jawa Tengah 57611</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fa-solid fa-phone text-brand-400"></i>
-                            <span id="footer-telepon">(0273) 321-5454</span>
+                            <span id="footer-telepon">+6285640366256</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fa-solid fa-envelope text-brand-400"></i>
@@ -676,7 +666,7 @@
                 </div>
             </div>
 
-            <div class="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] sm:text-xs text-slate-500 gap-3 sm:gap-4">
+            <div class="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3 sm:gap-4">
                 <p>&copy; 2026 SMA Negeri 54 Wonogiri. All rights reserved.</p>
                 <div class="flex gap-4">
                     <button type="button" class="hover:text-white">Privacy Policy</button>
@@ -686,23 +676,6 @@
         </div>
     </footer>
 
-    <!-- ADMIN LOGIN PIN MODAL -->
-    <div id="admin-modal" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-        <div class="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl border border-slate-100 text-center">
-            <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center mx-auto mb-3 text-xl">
-                <i class="fa-solid fa-lock"></i>
-            </div>
-            <h3 class="font-bold text-lg text-slate-900 mb-1">Login Admin Internal</h3>
-            <p class="text-xs text-slate-500 mb-4">Masukkan PIN keamanan 5-digit untuk membuka dashboard pengaduan.</p>
-            <input type="password" id="admin-pin" placeholder="PIN: 12345" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-center font-bold text-lg mb-2 focus:outline-none focus:border-brand-500 tracking-widest">
-            <p id="pin-error" class="text-xs text-rose-500 font-semibold mb-4 hidden">PIN yang Anda masukkan salah!</p>
-            <div class="flex gap-2">
-                <button type="button" onclick="closeAdminModal()" class="w-1/2 py-2.5 rounded-xl border border-slate-200 text-xs font-semibold text-slate-600 hover:bg-slate-50">Batal</button>
-                <button type="button" onclick="verifyAdminPIN()" class="w-1/2 py-2.5 rounded-xl bg-brand-500 text-white text-xs font-bold hover:bg-brand-600">Masuk</button>
-            </div>
-        </div>
-    </div>
-
     <!-- CUSTOM TOAST NOTIFICATION -->
     <div id="custom-toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
         <div class="bg-slate-900 text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-slate-800 flex items-center gap-3">
@@ -710,8 +683,8 @@
                 <i class="fa-solid fa-check text-sm"></i>
             </div>
             <div>
-                <h5 id="toast-title" class="font-bold text-xs">Berhasil Terkirim</h5>
-                <p id="toast-msg" class="text-[11px] text-slate-300">Pengaduan Anda telah kami terima.</p>
+                <h5 id="toast-title" class="font-bold text-xs">Membuka WhatsApp...</h5>
+                <p id="toast-msg" class="text-xs text-slate-300">Pengaduan Anda sedang diteruskan.</p>
             </div>
         </div>
     </div>
@@ -720,7 +693,7 @@
         // Global State Website Data
         window.siteData = null;
 
-        // Embedded Complete Default Data (Guarantees content is NEVER missing even if fetch fails or CORS locks)
+        // Embedded Complete Default Fallback Dataset
         const DEFAULT_DATA = {
             schoolInfo: {
                 name: "SMAN 54 WONOGIRI",
@@ -733,7 +706,8 @@
                 skAkreditasi: "BAN-S/M No. 1347/BAN-SM/SK/2023 (Nilai 96 - Akreditasi A)",
                 dapodikStatus: "Terverifikasi & Sinkron Aktif (Kementerian Pendidikan Dasar dan Menengah)",
                 alamat: "Jl. Raya Wonogiri - Pracimantoro KM. 54, Kabupaten Wonogiri, Jawa Tengah 57611",
-                telepon: "(0273) 321-5454",
+                telepon: "+6285640366256",
+                waPengaduan: "6285640366256",
                 email: "operator@sman54wonogiri.sch.id"
             },
             kepalaSekolah: {
@@ -756,7 +730,7 @@
                     title: "Peringatan Hari Pramuka & Kemah Bakti Konservasi Wonogiri",
                     img: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=1000",
                     summary: "Siswa-siswi SMAN 54 Wonogiri diterjunkan langsung dalam program reboisasi lereng perbukitan dan bakti kebersihan Waduk Gajah Mungkur.",
-                    body: "<p class=\"font-medium text-lg text-slate-800\">Dalam rangka memperingati Hari Pramuka ke-65, Gugus Depan SMAN 54 Wonogiri menyelenggarakan Kemah Bakti Lingkungan selama tiga hari bertempat di pesisir Waduk Gajah Mungkur, Wonogiri.</p><p>Kegiatan ini diikuti oleh seluruh anggota penegak kelas X dan XI dengan agenda utama penanaman 1.000 bibit pohon mahoni dan trembesi di daerah resapan air, penyuluhan pilah sampah organik-anorganik kepada warga sekitar waduk, serta malam api unggun budaya yang menampilkan pentas kreasi seni daerah.</p><p>Melalui kemah bakti ini, para siswa tidak hanya dilatih mandiri dan tangguh di alam terbuka, namun juga ditanamkan rasa tanggung jawab moral untuk merawat kelestarian sumber daya alam di tanah kelahiran mereka.</p>"
+                    body: "<p class=\"font-medium text-[15px] sm:text-lg text-slate-800\">Dalam rangka memperingati Hari Pramuka ke-65, Gugus Depan SMAN 54 Wonogiri menyelenggarakan Kemah Bakti Lingkungan selama tiga hari bertempat di pesisir Waduk Gajah Mungkur, Wonogiri.</p><p>Kegiatan ini diikuti oleh seluruh anggota penegak kelas X dan XI dengan agenda utama penanaman 1.000 bibit pohon mahoni dan trembesi di daerah resapan air, penyuluhan pilah sampah organik-anorganik kepada warga sekitar waduk, serta malam api unggun budaya yang menampilkan pentas kreasi seni daerah.</p><p>Melalui kemah bakti ini, para siswa tidak hanya dilatih mandiri dan tangguh di alam terbuka, namun juga ditanamkan rasa tanggung jawab moral untuk merawat kelestarian sumber daya alam di tanah kelahiran mereka.</p>"
                 },
                 {
                     id: "aktivitas-2",
@@ -767,7 +741,7 @@
                     title: "Kegiatan Sosialisasi Program Sekolah Adiwiyata Ramah Lingkungan",
                     img: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=1000",
                     summary: "Pelatihan pengelolaan bank sampah sekolah serta pembuatan instalasi biopori mandiri oleh kader hijau OSIS SMAN 54.",
-                    body: "<p class=\"font-medium text-lg text-slate-800\">Menyambut tahun ajaran baru, Tim Adiwiyata SMAN 54 Wonogiri menyelenggarakan lokakarya bertema \"Gerakan Sekolah Bersih dan Cerdas Berkelanjutan\" yang dihadiri oleh seluruh pengurus kelas dan perwakilan ekstrakurikuler.</p><p>Sosialisasi ini mengulas tata cara pemilahan sampah di sumbernya menggunakan sistem kode warna, pembuatan kompos daun dengan metode komposter anaerob, serta pemanfaatan aplikasi pencatatan tabungan sampah digital sekolah yang bekerja sama dengan bank sampah binaan Pemkab Wonogiri.</p>"
+                    body: "<p class=\"font-medium text-[15px] sm:text-lg text-slate-800\">Menyambut tahun ajaran baru, Tim Adiwiyata SMAN 54 Wonogiri menyelenggarakan lokakarya bertema \"Gerakan Sekolah Bersih dan Cerdas Berkelanjutan\" yang dihadiri oleh seluruh pengurus kelas dan perwakilan ekstrakurikuler.</p><p>Sosialisasi ini mengulas tata cara pemilahan sampah di sumbernya menggunakan sistem kode warna, pembuatan kompos daun dengan metode komposter anaerob, serta pemanfaatan aplikasi pencatatan tabungan sampah digital sekolah yang bekerja sama dengan bank sampah binaan Pemkab Wonogiri.</p>"
                 },
                 {
                     id: "aktivitas-3",
@@ -778,7 +752,7 @@
                     title: "Pelaksanaan Bina Karakter & Unggah-Ungguh Budaya Jawa",
                     img: "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=1000",
                     summary: "Kegiatan intensif pembentukan budi pekerti luhur, etika berbicara, dan penghormatan kepada orang tua bagi murid angkatan baru.",
-                    body: "<p class=\"font-medium text-lg text-slate-800\">Sebagai wujud pelestarian tradisi luhur di Kabupaten Wonogiri, SMAN 54 secara berkala mengadakan program Bina Karakter Budi Pekerti dan Pelatihan Bahasa Jawa Krama Inggil bagi seluruh peserta didik.</p><p>Kegiatan yang dimentori langsung oleh budayawan dan pengajar bahasa daerah ini melatih adab sopan santun kepada yang lebih tua, tata krama berbicara dalam pergaulan sehari-hari, serta penulisan aksara Jawa, agar para siswa tetap memiliki akar identitas budaya yang kuat di tengah era globalisasi yang serba modern.</p>"
+                    body: "<p class=\"font-medium text-[15px] sm:text-lg text-slate-800\">Sebagai wujud pelestarian tradisi luhur di Kabupaten Wonogiri, SMAN 54 secara berkala mengadakan program Bina Karakter Budi Pekerti dan Pelatihan Bahasa Jawa Krama Inggil bagi seluruh peserta didik.</p><p>Kegiatan yang dimentori langsung oleh budayawan dan pengajar bahasa daerah ini melatih adab sopan santun kepada yang lebih tua, tata krama berbicara dalam pergaulan sehari-hari, serta penulisan aksara Jawa, agar para siswa tetap memiliki akar identitas budaya yang kuat di tengah era globalisasi yang serba modern.</p>"
                 }
             ],
             berita: [
@@ -791,7 +765,7 @@
                     title: "Mengukir Prestasi di Bidang Sains: Janitra Ayu Padmarini, Siswi SMAN 54 Wonogiri Raih Juara 1 OSN Matematika",
                     img: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1000",
                     summary: "Perjalanan Menuju Takhta Juara Prestasi membanggakan kembali diukir oleh generasi muda Kabupaten Wonogiri. Janitra Ayu Padmarini, siswi berbakat dari SMA Negeri 54 Wonogiri, berhasil menyabet gelar Juara 1 dalam ajang Olimpiade Sains Nasional tingkat Provinsi Jawa Tengah...",
-                    body: "<p class=\"font-medium text-lg text-slate-800\">Prestasi membanggakan kembali dipersembahkan oleh putra-putri terbaik SMA Negeri 54 Wonogiri di kancah provinsi. Janitra Ayu Padmarini, siswi kelas XI MIPA 1, sukses menyabet Juara 1 dalam perhelatan akbar Olimpiade Sains Nasional (OSN) bidang Matematika Tingkat Provinsi Jawa Tengah.</p><p>Kompetisi yang berlangsung ketat selama tiga hari ini diikuti oleh ratusan perwakilan sekolah menengah atas dari seluruh kabupaten/kota se-Jawa Tengah. Dengan dedikasi pembinaan intensif dan ketelitian menyelesaikan soal-soal teori bilangan, aljabar tinggi, dan kombinatorika, Janitra berhasil mengungguli pesaing lainnya dengan poin mutlak.</p><h3 class=\"text-xl font-bold text-slate-900 mt-6 mb-3\">Dukungan Sekolah dan Kerja Keras Pembina</h3><p>Kepala SMA Negeri 54 Wonogiri, Dr. H. Anies Rasyid Baswedan, M.Pd., menyampaikan apresiasi setinggi-tingginya kepada Janitra dan tim guru pembimbing sains sekolah. \"Keberhasilan ini merupakan bukti nyata bahwa kerja keras, disiplin, dan ekosistem belajar yang kondusif di SMAN 54 mampu melahirkan talenta unggul yang bersaing di level nasional,\" tutur beliau.</p><p>Janitra saat ini tengah mempersiapkan diri untuk melaju ke tahap pemusatan latihan nasional (Pelatnas) OSN tingkat nasional yang akan digelar di Jakarta pada bulan Oktober mendatang. Seluruh keluarga besar SMAN 54 Wonogiri mendoakan hasil terbaik bagi ananda tercinta.</p>"
+                    body: "<p class=\"font-medium text-[15px] sm:text-lg text-slate-800\">Prestasi membanggakan kembali dipersembahkan oleh putra-putri terbaik SMA Negeri 54 Wonogiri di kancah provinsi. Janitra Ayu Padmarini, siswi kelas XI MIPA 1, sukses menyabet Juara 1 dalam perhelatan akbar Olimpiade Sains Nasional (OSN) bidang Matematika Tingkat Provinsi Jawa Tengah.</p><p>Kompetisi yang berlangsung ketat selama tiga hari ini diikuti oleh ratusan perwakilan sekolah menengah atas dari seluruh kabupaten/kota se-Jawa Tengah. Dengan dedikasi pembinaan intensif dan ketelitian menyelesaikan soal-soal teori bilangan, aljabar tinggi, dan kombinatorika, Janitra berhasil mengungguli pesaing lainnya dengan poin mutlak.</p><h3 class=\"text-lg sm:text-xl font-bold text-slate-900 mt-6 mb-3\">Dukungan Sekolah dan Kerja Keras Pembina</h3><p>Kepala SMA Negeri 54 Wonogiri, Dr. H. Anies Rasyid Baswedan, M.Pd., menyampaikan apresiasi setinggi-tingginya kepada Janitra dan tim guru pembimbing sains sekolah. \"Keberhasilan ini merupakan bukti nyata bahwa kerja keras, disiplin, dan ekosistem belajar yang kondusif di SMAN 54 mampu melahirkan talenta unggul yang bersaing di level nasional,\" tutur beliau.</p><p>Janitra saat ini tengah mempersiapkan diri untuk melaju ke tahap pemusatan latihan nasional (Pelatnas) OSN tingkat nasional yang akan digelar di Jakarta pada bulan Oktober mendatang. Seluruh keluarga besar SMAN 54 Wonogiri mendoakan hasil terbaik bagi ananda tercinta.</p>"
                 },
                 {
                     id: "berita-2",
@@ -802,7 +776,7 @@
                     title: "Banggakan Sekolah dan Daerah, Ferna Gavrila Patambo Siswi SMAN 54 Lolos DBL Jateng",
                     img: "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=1000",
                     summary: "Tim basket putri SMAN 54 Wonogiri kembali menorehkan tinta emas dalam kompetisi bergengsi Development Basketball League (DBL) regional Jawa Tengah.",
-                    body: "<p class=\"font-medium text-lg text-slate-800\">Tim basket putri SMAN 54 Wonogiri kembali menorehkan tinta emas dalam kompetisi bergengsi Development Basketball League (DBL) regional Jawa Tengah. Kapten tim, Ferna Gavrila Patambo, dinobatkan sebagai pemain terbaik (*MVP*) berkat performa luar biasa sepanjang turnamen.</p><p>Dalam laga semifinal yang berlangsung sengit di GOR Jatidiri, Ferna memimpin rekan-rekannya membalikkan keadaan di kuarter keempat hingga menundukkan tim unggulan lawan dengan skor dramatis 68-64.</p><h3 class=\"text-xl font-bold text-slate-900 mt-6 mb-3\">Semangat Sportivitas dan Solidaritas Tim</h3><p>Pelatih ekstrakurikuler basket SMAN 54 menyatakan bahwa kunci kemenangan tim adalah kekompakan dan latihan fisik rutin 4 kali seminggu yang dibarengi kedisiplinan belajar. Keberhasilan ini diharapkan menjadi inspirasi bagi adik-adik kelas untuk terus aktif berprestasi di bidang olahraga.</p>"
+                    body: "<p class=\"font-medium text-[15px] sm:text-lg text-slate-800\">Tim basket putri SMAN 54 Wonogiri kembali menorehkan tinta emas dalam kompetisi bergengsi Development Basketball League (DBL) regional Jawa Tengah. Kapten tim, Ferna Gavrila Patambo, dinobatkan sebagai pemain terbaik (*MVP*) berkat performa luar biasa sepanjang turnamen.</p><p>Dalam laga semifinal yang berlangsung sengit di GOR Jatidiri, Ferna memimpin rekan-rekannya membalikkan keadaan di kuarter keempat hingga menundukkan tim unggulan lawan dengan skor dramatis 68-64.</p><h3 class=\"text-lg sm:text-xl font-bold text-slate-900 mt-6 mb-3\">Semangat Sportivitas dan Solidaritas Tim</h3><p>Pelatih ekstrakurikuler basket SMAN 54 menyatakan bahwa kunci kemenangan tim adalah kekompakan dan latihan fisik rutin 4 kali seminggu yang dibarengi kedisiplinan belajar. Keberhasilan ini diharapkan menjadi inspirasi bagi adik-adik kelas untuk terus aktif berprestasi di bidang olahraga.</p>"
                 },
                 {
                     id: "berita-3",
@@ -813,7 +787,7 @@
                     title: "Tangguh di Dinding Panjat, Atlet SMAN 54 Wonogiri Raih Emas O2SN Provinsi",
                     img: "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&q=80&w=1000",
                     summary: "Cabang olahraga panjat dinding kembali menyumbangkan medali emas bagi kontingen Wonogiri melalui kepiawaian atlet muda SMAN 54 pada O2SN.",
-                    body: "<p class=\"font-medium text-lg text-slate-800\">Cabang olahraga panjat dinding kembali menyumbangkan medali emas bagi kontingen Wonogiri melalui kepiawaian atlet muda SMAN 54 pada Olimpiade Olahraga Siswa Nasional (O2SN) Provinsi Jawa Tengah 2026.</p><p>Kecepatan dan ketepatan membaca jalur pemanjatan kategori *speed world record* mengantarkan atlet SMAN 54 mencatatkan waktu impresif 7.12 detik, sekaligus memecahkan rekor waktu kejuaraan tahun sebelumnya.</p>"
+                    body: "<p class=\"font-medium text-[15px] sm:text-lg text-slate-800\">Cabang olahraga panjat dinding kembali menyumbangkan medali emas bagi kontingen Wonogiri melalui kepiawaian atlet muda SMAN 54 pada Olimpiade Olahraga Siswa Nasional (O2SN) Provinsi Jawa Tengah 2026.</p><p>Kecepatan dan ketepatan membaca jalur pemanjatan kategori *speed world record* mengantarkan atlet SMAN 54 mencatatkan waktu impresif 7.12 detik, sekaligus memecahkan rekor waktu kejuaraan tahun sebelumnya.</p>"
                 },
                 {
                     id: "berita-4",
@@ -824,7 +798,7 @@
                     title: "Pertahankan Piala Bergilir, SMAN 54 Wonogiri Sukses Raih Juara Umum LKTI Remaja",
                     img: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=1000",
                     summary: "Tim Karya Ilmiah Remaja (KIR) SMAN 54 Wonogiri berhasil mempertahankan piala bergilir Lomba Karya Tulis Ilmiah (LKTI) Lingkungan se-Jawa Tengah.",
-                    body: "<p class=\"font-medium text-lg text-slate-800\">Tim Karya Ilmiah Remaja (KIR) SMAN 54 Wonogiri berhasil mempertahankan piala bergilir Lomba Karya Tulis Ilmiah (LKTI) Lingkungan se-Jawa Tengah dengan membawakan penelitian inovatif berjudul \"Pemanfaatan Eceng Gondok Waduk Gajah Mungkur sebagai Bio-Komposit Ramah Lingkungan\".</p><p>Penelitian ini mendapatkan apresiasi tinggi dari para dewan juri akademisi karena menawarkan solusi nyata bagi ekosistem waduk sekaligus memiliki nilai ekonomi tinggi bagi masyarakat lokal.</p>"
+                    body: "<p class=\"font-medium text-[15px] sm:text-lg text-slate-800\">Tim Karya Ilmiah Remaja (KIR) SMAN 54 Wonogiri berhasil mempertahankan piala bergilir Lomba Karya Tulis Ilmiah (LKTI) Lingkungan se-Jawa Tengah dengan membawakan penelitian inovatif berjudul \"Pemanfaatan Eceng Gondok Waduk Gajah Mungkur sebagai Bio-Komposit Ramah Lingkungan\".</p><p>Penelitian ini mendapatkan apresiasi tinggi dari para dewan juri akademisi karena menawarkan solusi nyata bagi ekosistem waduk sekaligus memiliki nilai ekonomi tinggi bagi masyarakat lokal.</p>"
                 }
             ],
             profil: {
@@ -897,7 +871,7 @@
             lulusan: { ptn: "82%", kedinasan: "12%", kerja: "6%" }
         };
 
-        // Load & Hydrate Data (Tries fetch data.json first, falls back to DEFAULT_DATA)
+        // Load & Hydrate Data
         async function loadWebsiteData() {
             try {
                 const res = await fetch('data.json');
@@ -928,7 +902,7 @@
                 document.getElementById('footer-logo-name').textContent = data.schoolInfo.name || "SMAN 54 WONOGIRI";
                 document.getElementById('footer-logo-img').src = data.schoolInfo.logo || "";
                 document.getElementById('footer-alamat').textContent = data.schoolInfo.alamat || "";
-                document.getElementById('footer-telepon').textContent = data.schoolInfo.telepon || "";
+                document.getElementById('footer-telepon').textContent = data.schoolInfo.telepon || "+6285640366256";
                 document.getElementById('footer-email').textContent = data.schoolInfo.email || "";
 
                 document.getElementById('akreditasi-npsn').textContent = data.schoolInfo.npsn || "20395400";
@@ -962,18 +936,18 @@
                     aktivGrid.innerHTML = data.aktivitas.map(item => `
                         <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group cursor-pointer flex flex-col justify-between" onclick="openFullArticle('${item.id}')">
                             <div>
-                                <div class="relative h-44 sm:h-56 overflow-hidden">
+                                <div class="relative h-48 sm:h-56 overflow-hidden">
                                     <img src="${item.img}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                                    <span class="absolute top-3 left-3 bg-brand-500 text-white font-bold text-[9px] sm:text-[10px] uppercase tracking-wider px-2 py-0.5 sm:px-2.5 sm:py-1 rounded">${item.badge || 'GALERI'}</span>
+                                    <span class="absolute top-3 left-3 bg-brand-500 text-white font-bold text-xs uppercase tracking-wider px-2.5 py-1 rounded-md">${item.badge || 'GALERI'}</span>
                                 </div>
                                 <div class="p-4 sm:p-6">
-                                    <span class="text-[10px] sm:text-xs text-slate-400 font-medium">${item.date}</span>
+                                    <span class="text-xs text-slate-400 font-medium">${item.date}</span>
                                     <h3 class="font-bold text-slate-900 text-sm sm:text-lg mt-1 mb-1.5 sm:mb-2 group-hover:text-brand-600 transition line-clamp-2">${item.title}</h3>
-                                    <p class="text-[11px] sm:text-xs text-slate-600 line-clamp-2 leading-relaxed">${item.summary}</p>
+                                    <p class="text-xs text-slate-600 line-clamp-2 leading-relaxed">${item.summary}</p>
                                 </div>
                             </div>
                             <div class="px-4 pb-4 sm:px-6 sm:pb-6">
-                                <span class="text-xs font-bold text-brand-600 group-hover:underline inline-flex items-center gap-1">Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                                <span class="text-xs font-bold text-brand-600 group-hover:underline inline-flex items-center gap-1">Baca Selengkapnya <i class="fa-solid fa-arrow-right text-xs"></i></span>
                             </div>
                         </div>
                     `).join('');
@@ -991,15 +965,15 @@
                     featContainer.innerHTML = `
                         <div class="relative h-56 sm:h-80 overflow-hidden">
                             <img src="${featured.img}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                            <span class="absolute top-3 left-3 sm:top-4 sm:left-4 bg-brand-500 text-white font-bold text-[10px] sm:text-xs uppercase px-2.5 py-0.5 sm:px-3 sm:py-1 rounded">${featured.tag || 'PRESTASI'}</span>
+                            <span class="absolute top-3 left-3 sm:top-4 sm:left-4 bg-brand-500 text-white font-bold text-xs uppercase px-2.5 py-1 rounded-md">${featured.tag || 'PRESTASI'}</span>
                         </div>
                         <div class="p-4 sm:p-8 flex-grow flex flex-col justify-between">
                             <div>
-                                <div class="flex items-center gap-3 text-[10px] sm:text-xs text-slate-400 mb-2 sm:mb-3">
+                                <div class="flex items-center gap-3 text-xs text-slate-400 mb-2 sm:mb-3">
                                     <span><i class="fa-regular fa-clock"></i> ${featured.date}</span>
                                     <span><i class="fa-regular fa-user"></i> ${featured.author}</span>
                                 </div>
-                                <h3 class="text-lg sm:text-2xl font-bold text-slate-900 mb-2 sm:mb-3 leading-tight group-hover:text-brand-600 transition line-clamp-2">${featured.title}</h3>
+                                <h3 class="text-base sm:text-2xl font-bold text-slate-900 mb-2 sm:mb-3 leading-tight group-hover:text-brand-600 transition line-clamp-2">${featured.title}</h3>
                                 <p class="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-3">${featured.summary}</p>
                             </div>
                             <span class="mt-4 sm:mt-6 text-brand-600 font-bold text-xs sm:text-sm group-hover:underline flex items-center gap-1">Baca Selengkapnya &rarr;</span>
@@ -1013,9 +987,9 @@
                         <div class="p-3 sm:p-4 bg-slate-50 hover:bg-white rounded-xl sm:rounded-2xl border border-slate-100 hover:shadow-md transition flex gap-3 sm:gap-4 items-center group cursor-pointer" onclick="openFullArticle('${item.id}')">
                             <img src="${item.img}" class="w-20 h-20 sm:w-24 sm:h-24 rounded-lg sm:rounded-xl object-cover shrink-0">
                             <div>
-                                <span class="text-[9px] sm:text-[10px] font-bold text-brand-600 uppercase">${item.tag || 'BERITA'}</span>
+                                <span class="text-xs font-bold text-brand-600 uppercase">${item.tag || 'BERITA'}</span>
                                 <h4 class="font-bold text-slate-900 text-xs sm:text-sm group-hover:text-brand-600 transition line-clamp-2 mt-0.5">${item.title}</h4>
-                                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1 block"><i class="fa-regular fa-clock mr-1"></i> ${item.date}</span>
+                                <span class="text-xs text-slate-400 mt-1 block"><i class="fa-regular fa-clock mr-1"></i> ${item.date}</span>
                             </div>
                         </div>
                     `).join('');
@@ -1036,7 +1010,7 @@
                         <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-100 shadow-sm">
                             <div class="w-10 h-10 sm:w-12 sm:h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-base sm:text-xl font-bold mb-3 sm:mb-4">${prog.num}</div>
                             <h4 class="font-bold text-slate-900 text-sm sm:text-lg mb-1.5 sm:mb-2">${prog.title}</h4>
-                            <p class="text-xs text-slate-600 leading-relaxed">${prog.desc}</p>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">${prog.desc}</p>
                         </div>
                     `).join('');
                 }
@@ -1060,9 +1034,9 @@
                 if (data.kesiswaan.prestasiGaleri) {
                     document.getElementById('prestasi-galeri-grid').innerHTML = data.kesiswaan.prestasiGaleri.map(p => `
                         <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-100 shadow-sm">
-                            <span class="text-[10px] sm:text-xs text-brand-600 font-bold">${p.level}</span>
+                            <span class="text-xs text-brand-600 font-bold">${p.level}</span>
                             <h4 class="font-bold text-slate-900 text-sm sm:text-base mt-1">${p.title}</h4>
-                            <p class="text-[11px] sm:text-xs text-slate-500 mt-2">${p.date}</p>
+                            <p class="text-xs text-slate-500 mt-2">${p.date}</p>
                         </div>
                     `).join('');
                 }
@@ -1078,10 +1052,10 @@
             if (data.gtk) {
                 document.getElementById('gtk-grid').innerHTML = data.gtk.map(g => `
                     <div class="gtk-card bg-white p-4 sm:p-6 rounded-2xl border border-slate-100 text-center shadow-sm hover:shadow-md transition">
-                        <img src="${g.foto}" class="w-16 h-16 sm:w-24 sm:h-24 rounded-full mx-auto object-cover mb-2 sm:mb-4 border border-slate-100">
+                        <img src="${g.foto}" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full mx-auto object-cover mb-2 sm:mb-4 border border-slate-100">
                         <h4 class="font-bold text-slate-900 text-xs sm:text-base font-gtk-name">${g.nama}</h4>
-                        <span class="text-[10px] sm:text-xs text-brand-600 font-semibold block mt-0.5 sm:mt-1 font-gtk-role">${g.role}</span>
-                        <span class="text-[9px] sm:text-[10px] text-slate-400 block mt-0.5">${g.nip}</span>
+                        <span class="text-xs text-brand-600 font-semibold block mt-0.5 sm:mt-1 font-gtk-role">${g.role}</span>
+                        <span class="text-xs text-slate-400 block mt-0.5">${g.nip}</span>
                     </div>
                 `).join('');
             }
@@ -1214,61 +1188,37 @@
             }, 4000);
         }
 
-        // Submit Aduan
-        function submitAduan(e) {
+        // Submit Aduan Langsung Diteruskan ke WhatsApp
+        function submitAduanWA(e) {
             e.preventDefault();
-            const nama = document.getElementById('aduan-nama').value || "Anonim";
-            const kontak = document.getElementById('aduan-kontak').value;
+            const nama = document.getElementById('aduan-nama').value.trim() || "Anonim";
+            const kontak = document.getElementById('aduan-kontak').value.trim();
             const kategori = document.getElementById('aduan-kategori').value;
-            const pesan = document.getElementById('aduan-pesan').value;
+            const pesan = document.getElementById('aduan-pesan').value.trim();
 
-            const tbody = document.getElementById('aduan-table-body');
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td class="p-3 text-xs">Hari ini</td>
-                <td class="p-3 font-semibold">${nama}</td>
-                <td class="p-3 text-xs">${kontak}</td>
-                <td class="p-3"><span class="bg-brand-100 text-brand-800 text-[10px] font-bold px-2 py-0.5 rounded">${kategori}</span></td>
-                <td class="p-3 text-xs">${pesan}</td>
-                <td class="p-3"><span class="bg-yellow-100 text-yellow-800 text-[10px] font-bold px-2 py-0.5 rounded">Baru Masuk</span></td>
-                <td class="p-3"><button type="button" onclick="updateAduanStatus(this)" class="text-xs text-brand-600 font-bold hover:underline">Selesaikan</button></td>
-            `;
-            tbody.prepend(row);
+            // Ambil nomor WA dari data.json atau fallback
+            const rawPhone = (window.siteData && window.siteData.schoolInfo && window.siteData.schoolInfo.waPengaduan) 
+                ? window.siteData.schoolInfo.waPengaduan 
+                : "6285640366256";
+            
+            const waNumber = rawPhone.replace(/[^0-9]/g, '');
 
+            const waText = `*LAPORAN PENGADUAN SMAN 54 WONOGIRI*\n\n` +
+                           `• *Nama Pelapor:* ${nama}\n` +
+                           `• *Kontak Pelapor:* ${kontak}\n` +
+                           `• *Kategori Laporan:* ${kategori}\n\n` +
+                           `*Isi Laporan / Pesan:*\n"${pesan}"\n\n` +
+                           `_Dikirim melalui Portal Layanan Pengaduan Website SMAN 54 Wonogiri_`;
+
+            const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(waText)}`;
+
+            showToast('Membuka WhatsApp...', 'Laporan pengaduan Anda diteruskan ke nomor resmi sekolah.');
+            
+            setTimeout(() => {
+                window.open(waUrl, '_blank');
+            }, 800);
+            
             document.getElementById('form-pengaduan').reset();
-            showToast('Laporan Terkirim', 'Terima kasih, pengaduan Anda segera ditindaklanjuti oleh admin.');
-        }
-
-        // Admin PIN Verification
-        function openAdminModal() {
-            document.getElementById('pin-error').classList.add('hidden');
-            document.getElementById('admin-modal').classList.remove('hidden');
-            document.getElementById('admin-modal').classList.add('flex');
-            document.getElementById('admin-pin').focus();
-        }
-
-        function closeAdminModal() {
-            document.getElementById('admin-modal').classList.add('hidden');
-            document.getElementById('admin-modal').classList.remove('flex');
-            document.getElementById('admin-pin').value = '';
-        }
-
-        function verifyAdminPIN() {
-            const pin = document.getElementById('admin-pin').value;
-            if (pin === '12345') {
-                closeAdminModal();
-                navigateTo('dashboard-admin');
-                showToast('Login Berhasil', 'Selamat datang di Dashboard Admin Pengaduan.');
-            } else {
-                document.getElementById('pin-error').classList.remove('hidden');
-            }
-        }
-
-        function updateAduanStatus(btn) {
-            const td = btn.parentElement.previousElementSibling;
-            td.innerHTML = `<span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">Selesai</span>`;
-            btn.remove();
-            showToast('Status Diperbarui', 'Pengaduan telah ditandai selesai.');
         }
 
         // Initialize on DOM Ready
