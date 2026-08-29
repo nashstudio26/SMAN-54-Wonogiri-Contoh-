@@ -47,10 +47,39 @@
     <style>
         .backdrop-blur-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
         .page-section { display: none !important; }
-        .page-section.active { display: block !important; animation: fadeIn 0.25s ease-in-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+        .page-section.active { display: block !important; animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
         .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
         .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+        /* Smooth Soft Reveal-on-Scroll Animations */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero Background Slider Fade Effects */
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0;
+            transition: opacity 1.2s ease-in-out, transform 8s ease-out;
+            transform: scale(1.02);
+        }
+        .hero-slide.active-slide {
+            opacity: 1;
+            transform: scale(1.08);
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen selection:bg-brand-500 selection:text-white">
@@ -196,34 +225,36 @@
 
         <!-- 1. SEKSI BERANDA -->
         <div id="beranda" class="page-section active">
-            <!-- Hero Banner Section (Fully Centered with Tightened CTA Buttons) -->
-            <section class="relative bg-slate-900 text-white overflow-hidden py-14 sm:py-24 lg:py-36">
-                <div class="absolute inset-0 z-0">
-                    <img id="hero-bg-img" src="https://lh3.googleusercontent.com/d/1DqqeKbhR8xQP6iVPfH8C_rtMk8bok50Y" alt="Gedung SMAN 54 Wonogiri" class="w-full h-full object-cover object-center opacity-40 scale-105" 
-                         onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1DqqeKbhR8xQP6iVPfH8C_rtMk8bok50Y&sz=w1600';">
-                    <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-900/80 to-slate-900/90"></div>
+            <!-- Hero Banner Section (Dynamic 2-Image 5s Carousel) -->
+            <section class="relative bg-slate-950 text-white overflow-hidden py-16 sm:py-28 lg:py-36">
+                <!-- Dynamic Image Slideshow Container -->
+                <div id="hero-slider-container" class="absolute inset-0 z-0 overflow-hidden">
+                    <!-- Slides injected dynamically by JS -->
                 </div>
 
+                <!-- Dark Gradient Overlay for optimal photo visibility & text contrast -->
+                <div class="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-slate-950/60 to-slate-950/85 z-1 pointer-events-none"></div>
+
                 <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center">
-                    <div class="max-w-3xl flex flex-col items-center">
+                    <div class="max-w-3xl flex flex-col items-center reveal-on-scroll">
                         <!-- Custom Sharp-Corner Rectangle Badge -->
                         <div class="inline-block bg-[#c2410c] text-white font-extrabold text-xs sm:text-xs uppercase tracking-widest px-4 py-1.5 rounded-none mb-4 sm:mb-6 shadow-md mx-auto">
                             Website Resmi
                         </div>
                         
-                        <h1 id="hero-title" class="text-2xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white mb-3 sm:mb-6 text-center">
+                        <h1 id="hero-title" class="text-2xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white mb-3 sm:mb-6 text-center drop-shadow-md">
                             SMA Negeri 54 Wonogiri
                         </h1>
-                        <p id="hero-motto" class="text-sm sm:text-lg lg:text-xl text-slate-200 leading-relaxed font-normal mb-6 sm:mb-8 max-w-2xl text-center">
+                        <p id="hero-motto" class="text-sm sm:text-lg lg:text-xl text-slate-100 leading-relaxed font-normal mb-6 sm:mb-8 max-w-2xl text-center drop-shadow">
                             Mencetak generasi cerdas, berkarakter luhur, dan berdaya saing global melalui pendidikan berkualitas yang berwawasan lingkungan di Kabupaten Wonogiri.
                         </p>
 
-                        <!-- Centered Dual Action Buttons (Slightly Reduced Width) -->
-                        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-auto">
-                            <button type="button" onclick="navigateTo('kesiswaan-spmb')" class="w-auto bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs sm:text-sm px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl shadow-lg shadow-brand-500/30 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-0.5">
+                        <!-- Equal Width & Compact Centered CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-md mx-auto">
+                            <button type="button" onclick="navigateTo('kesiswaan-spmb')" class="w-64 max-w-[80%] sm:w-48 bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs sm:text-sm py-3 sm:py-3.5 rounded-xl shadow-lg shadow-brand-500/30 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-0.5 shrink-0">
                                 Info Pendaftaran <i class="fa-solid fa-arrow-right text-xs"></i>
                             </button>
-                            <button type="button" onclick="navigateTo('profil-sejarah')" class="w-auto bg-white/10 hover:bg-white/20 text-white font-semibold text-xs sm:text-sm px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl backdrop-blur-sm border border-white/20 transition">
+                            <button type="button" onclick="navigateTo('profil-sejarah')" class="w-64 max-w-[80%] sm:w-48 bg-white/20 hover:bg-white/30 text-white font-semibold text-xs sm:text-sm py-3 sm:py-3.5 rounded-xl backdrop-blur-md border border-white/30 transition flex items-center justify-center gap-2 shrink-0">
                                 Jelajahi Sekolah
                             </button>
                         </div>
@@ -231,12 +262,12 @@
                 </div>
             </section>
 
-            <!-- Sambutan Kepala Sekolah (Enlarged Photo Frame & Increased Text Size) -->
-            <section class="py-10 sm:py-20 bg-white border-b border-slate-100">
+            <!-- Sambutan Kepala Sekolah -->
+            <section class="py-10 sm:py-20 bg-white border-b border-slate-100 reveal-on-scroll">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-12 items-center">
                         <div class="lg:col-span-5 relative">
-                            <!-- Enlarged Principal Frame -->
+                            <!-- Principal Frame -->
                             <div class="relative mx-auto max-w-[300px] sm:max-w-md rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-sky-100 p-2.5">
                                 <img id="kepsek-img" src="https://lh3.googleusercontent.com/d/13Vg2YyDqNqYgeiIZ5kL1SMqjVdNEX7Z9" alt="Kepala Sekolah SMAN 54 Wonogiri" class="w-full h-auto object-cover rounded-xl min-h-[320px] sm:min-h-[420px]"
                                      onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=13Vg2YyDqNqYgeiIZ5kL1SMqjVdNEX7Z9&sz=w800';">
@@ -254,7 +285,6 @@
                             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4 sm:mb-6">
                                 Mewujudkan Generasi Emas SMA Negeri 54 Wonogiri
                             </h2>
-                            <!-- Increased Font Size by ~2pt -->
                             <div id="kepsek-sambutan-body" class="prose prose-slate text-sm sm:text-base leading-relaxed text-slate-700 space-y-3 sm:space-y-4">
                                 <!-- Dynamic Sambutan Text -->
                             </div>
@@ -264,7 +294,7 @@
             </section>
 
             <!-- Aktivitas Siswa -->
-            <section class="py-10 sm:py-20 bg-slate-50">
+            <section class="py-10 sm:py-20 bg-slate-50 reveal-on-scroll">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-6 sm:mb-12">
                         <div>
@@ -287,7 +317,7 @@
             </section>
 
             <!-- Statistik Pengunjung -->
-            <section class="py-8 sm:py-16 bg-white border-y border-slate-100">
+            <section class="py-8 sm:py-16 bg-white border-y border-slate-100 reveal-on-scroll">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <div class="inline-block border-b-2 border-brand-500 pb-1 mb-2">
                         <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">STATISTIK</span>
@@ -295,7 +325,7 @@
                     <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-6 sm:mb-10">Pengunjung Website</h2>
 
                     <div class="grid grid-cols-3 gap-3 sm:gap-6 max-w-4xl mx-auto">
-                        <div class="bg-slate-50 p-4 sm:p-6 rounded-2xl border border-slate-100 flex flex-col items-center">
+                        <div class="bg-slate-50 p-4 sm:p-6 rounded-2xl border border-slate-100 flex flex-col items-center transition hover:shadow-md">
                             <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center mb-2 sm:mb-3 text-sm sm:text-xl">
                                 <i class="fa-regular fa-clock"></i>
                             </div>
@@ -303,7 +333,7 @@
                             <span id="stat-hari-ini" class="text-lg sm:text-4xl font-extrabold text-slate-900">74</span>
                         </div>
 
-                        <div class="bg-slate-50 p-4 sm:p-6 rounded-2xl border border-slate-100 flex flex-col items-center">
+                        <div class="bg-slate-50 p-4 sm:p-6 rounded-2xl border border-slate-100 flex flex-col items-center transition hover:shadow-md">
                             <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center mb-2 sm:mb-3 text-sm sm:text-xl">
                                 <i class="fa-regular fa-calendar-days"></i>
                             </div>
@@ -311,7 +341,7 @@
                             <span id="stat-bulan-ini" class="text-lg sm:text-4xl font-extrabold text-slate-900">2,261</span>
                         </div>
 
-                        <div class="bg-slate-50 p-4 sm:p-6 rounded-2xl border border-slate-100 flex flex-col items-center">
+                        <div class="bg-slate-50 p-4 sm:p-6 rounded-2xl border border-slate-100 flex flex-col items-center transition hover:shadow-md">
                             <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-2 sm:mb-3 text-sm sm:text-xl">
                                 <i class="fa-solid fa-chart-line"></i>
                             </div>
@@ -322,25 +352,27 @@
                 </div>
             </section>
 
-            <!-- Banner SPMB / PPDB -->
-            <section class="relative bg-slate-900 text-white py-10 sm:py-16 overflow-hidden">
-                <div class="absolute inset-0">
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover opacity-20">
+            <!-- Banner SPMB / PPDB (Dynamic Background Image & Content Editable via data.json) -->
+            <section class="relative bg-slate-900 text-white py-10 sm:py-16 overflow-hidden reveal-on-scroll">
+                <div class="absolute inset-0 z-0">
+                    <img id="ppdb-banner-bg" src="https://lh3.googleusercontent.com/d/1596KUHbo51SE5fLgYvBvOf6DpC1fIMxF" alt="PPDB SMAN 54 Wonogiri" class="w-full h-full object-cover opacity-25"
+                         onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1596KUHbo51SE5fLgYvBvOf6DpC1fIMxF&sz=w1200';">
+                    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/80 to-slate-900/40"></div>
                 </div>
-                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6">
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6">
                     <div>
-                        <span class="text-xs font-bold text-brand-400 uppercase tracking-widest">PORTAL PENDAFTARAN</span>
-                        <h3 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">Penerimaan Peserta Didik Baru (PPDB)</h3>
-                        <p class="text-slate-300 text-sm sm:text-base mt-1 sm:mt-2 max-w-2xl">Bergabunglah bersama keluarga besar SMA Negeri 54 Wonogiri. Temukan informasi lengkap mengenai alur, syarat, dan jadwal pendaftaran.</p>
+                        <span id="ppdb-banner-badge" class="text-xs font-bold text-brand-400 uppercase tracking-widest">PORTAL PENDAFTARAN</span>
+                        <h3 id="ppdb-banner-title" class="text-2xl sm:text-4xl font-extrabold text-white mt-1">Penerimaan Peserta Didik Baru (PPDB)</h3>
+                        <p id="ppdb-banner-desc" class="text-slate-300 text-sm sm:text-base mt-1 sm:mt-2 max-w-2xl">Bergabunglah bersama keluarga besar SMA Negeri 54 Wonogiri. Temukan informasi lengkap mengenai alur, syarat, dan jadwal pendaftaran di Portal SPMB SMAN 54.</p>
                     </div>
-                    <button type="button" onclick="navigateTo('kesiswaan-spmb')" class="w-auto bg-brand-400 hover:bg-brand-500 text-slate-950 font-bold text-xs sm:text-sm px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl transition shrink-0 flex items-center justify-center gap-2">
+                    <button type="button" id="ppdb-banner-btn" onclick="navigateTo('kesiswaan-spmb')" class="w-auto bg-brand-400 hover:bg-brand-500 text-slate-950 font-bold text-xs sm:text-sm px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl transition shrink-0 flex items-center justify-center gap-2">
                         Masuk Portal SPMB <i class="fa-solid fa-arrow-right text-xs"></i>
                     </button>
                 </div>
             </section>
 
             <!-- Berita & Prestasi Section -->
-            <section class="py-10 sm:py-20 bg-white">
+            <section class="py-10 sm:py-20 bg-white reveal-on-scroll">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex items-end justify-between mb-6 sm:mb-12">
                         <div>
@@ -391,7 +423,6 @@
                     <img id="art-img" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1000" class="w-full h-56 sm:h-96 object-cover">
                 </div>
 
-                <!-- Increased Article Font Size -->
                 <div id="art-body" class="prose prose-slate max-w-none text-slate-700 text-base sm:text-lg leading-relaxed space-y-4 sm:space-y-6">
                     <!-- Dynamic Body Content -->
                 </div>
@@ -595,7 +626,7 @@
                     <p class="text-slate-600 text-sm sm:text-base mt-1">Sampaikan aduan, masukan, atau aspirasi Anda langsung ke nomor resmi WhatsApp sekolah.</p>
                 </div>
 
-                <!-- Form Pengaduan Direct WA (Increased Input/Label Font Size) -->
+                <!-- Form Pengaduan Direct WA -->
                 <form id="form-pengaduan" onsubmit="submitAduanWA(event)" class="bg-white p-5 sm:p-8 rounded-2xl border border-slate-100 shadow-md space-y-4 sm:space-y-5">
                     <div>
                         <label class="block text-xs sm:text-sm font-bold uppercase text-slate-700 mb-1">Nama Pelapor (Opsional)</label>
@@ -709,7 +740,7 @@
         // Global State Website Data
         window.siteData = null;
 
-        // Embedded Complete Default Fallback Dataset
+        // Default Fallback Dataset
         const DEFAULT_DATA = {
             schoolInfo: {
                 name: "SMAN 54 WONOGIRI",
@@ -717,7 +748,11 @@
                 subTagline: "Unggul, Berkarakter & Berbudaya",
                 motto: "Mencetak generasi cerdas, berkarakter luhur, dan berdaya saing global melalui pendidikan berkualitas yang berwawasan lingkungan di Kabupaten Wonogiri.",
                 logo: "https://lh3.googleusercontent.com/d/1ZD3BQxowpqMtcOIj-glz-XXb9ukhuLYM",
-                heroBg: "https://lh3.googleusercontent.com/d/1DqqeKbhR8xQP6iVPfH8C_rtMk8bok50Y",
+                heroBg: "https://lh3.googleusercontent.com/d/1Lq33TB6_fj2QqyCODw2vqRIWj9pjhv9_",
+                heroBgList: [
+                    "https://lh3.googleusercontent.com/d/1Lq33TB6_fj2QqyCODw2vqRIWj9pjhv9_",
+                    "https://lh3.googleusercontent.com/d/1svsk5uNovs_tWnvDOzTFFSrGBjPcR_iV"
+                ],
                 npsn: "20395400",
                 skAkreditasi: "BAN-S/M No. 1347/BAN-SM/SK/2023 (Nilai 96 - Akreditasi A)",
                 dapodikStatus: "Terverifikasi & Sinkron Aktif (Kementerian Pendidikan Dasar dan Menengah)",
@@ -857,6 +892,13 @@
                 bkDesc: "Unit Bimbingan dan Konseling SMAN 54 Wonogiri menyediakan konsultasi personal, bimbingan studi lanjut, pemetaan bakat minat, serta dukungan pendampingan psikologis dalam suasana yang ramah, profesional, dan menjaga kerahasiaan siswa."
             },
             kesiswaan: {
+                ppdbBanner: {
+                    badge: "PORTAL PENDAFTARAN",
+                    title: "Penerimaan Peserta Didik Baru (PPDB)",
+                    desc: "Bergabunglah bersama keluarga besar SMA Negeri 54 Wonogiri. Temukan informasi lengkap mengenai alur, syarat, dan jadwal pendaftaran di Portal SPMB SMAN 54.",
+                    bgImg: "https://lh3.googleusercontent.com/d/1596KUHbo51SE5fLgYvBvOf6DpC1fIMxF",
+                    buttonText: "Masuk Portal SPMB"
+                },
                 spmbInfo: "Pendaftaran siswa baru SMA Negeri 54 Wonogiri dibuka melalui 4 jalur: Jalur Zonasi, Jalur Prestasi, Jalur Afirmasi, dan Jalur Perpindahan Tugas Orang Tua.",
                 spmbStatusNotice: "Pendaftaran saat ini ditutup. Kami akan menginformasikan melalui portal resmi ini ketika pendaftaran gelombang berikutnya resmi dibuka.",
                 spmbSyarat: [
@@ -888,6 +930,53 @@
             lulusan: { ptn: "82%", kedinasan: "12%", kerja: "6%" }
         };
 
+        // Hero Slideshow Interval Handler
+        let currentSlideIndex = 0;
+        let heroSlideInterval = null;
+
+        function initHeroSlideshow(bgList) {
+            const container = document.getElementById('hero-slider-container');
+            if (!container) return;
+
+            const slides = (bgList && bgList.length > 0) ? bgList : DEFAULT_DATA.schoolInfo.heroBgList;
+            
+            container.innerHTML = slides.map((src, idx) => `
+                <img src="${src}" class="hero-slide ${idx === 0 ? 'active-slide' : ''}" alt="Slide Background SMAN 54 Wonogiri ${idx + 1}"
+                     onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1Lq33TB6_fj2QqyCODw2vqRIWj9pjhv9_&sz=w1600';">
+            `).join('');
+
+            if (heroSlideInterval) clearInterval(heroSlideInterval);
+
+            heroSlideInterval = setInterval(() => {
+                const allSlides = container.querySelectorAll('.hero-slide');
+                if (allSlides.length < 2) return;
+
+                allSlides[currentSlideIndex].classList.remove('active-slide');
+                currentSlideIndex = (currentSlideIndex + 1) % allSlides.length;
+                allSlides[currentSlideIndex].classList.add('active-slide');
+            }, 5000);
+        }
+
+        // Initialize Observer for Soft Fade-In Scroll Animations
+        function initScrollObserver() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -40px 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+        }
+
         // Load & Hydrate Data
         async function loadWebsiteData() {
             try {
@@ -901,6 +990,8 @@
                 window.siteData = DEFAULT_DATA;
             }
             hydrateDOM(window.siteData);
+            initHeroSlideshow(window.siteData?.schoolInfo?.heroBgList);
+            initScrollObserver();
         }
 
         // Hydration Logic
@@ -912,7 +1003,6 @@
                 document.getElementById('site-logo-name').textContent = data.schoolInfo.name || "SMAN 54 WONOGIRI";
                 document.getElementById('site-logo-sub').textContent = data.schoolInfo.subTagline || "";
                 document.getElementById('site-logo-img').src = data.schoolInfo.logo || "";
-                document.getElementById('hero-bg-img').src = data.schoolInfo.heroBg || "";
                 document.getElementById('hero-title').textContent = data.schoolInfo.fullName || "SMA Negeri 54 Wonogiri";
                 document.getElementById('hero-motto').textContent = data.schoolInfo.motto || "";
                 
@@ -951,7 +1041,7 @@
                 const aktivGrid = document.getElementById('aktivitas-grid');
                 if (aktivGrid) {
                     aktivGrid.innerHTML = data.aktivitas.map(item => `
-                        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group cursor-pointer flex flex-col justify-between" onclick="openFullArticle('${item.id}')">
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group cursor-pointer flex flex-col justify-between reveal-on-scroll" onclick="openFullArticle('${item.id}')">
                             <div>
                                 <div class="relative h-48 sm:h-56 overflow-hidden">
                                     <img src="${item.img}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -1043,6 +1133,16 @@
             }
 
             if (data.kesiswaan) {
+                // PPDB Banner dynamic hydration
+                if (data.kesiswaan.ppdbBanner) {
+                    const banner = data.kesiswaan.ppdbBanner;
+                    if (banner.badge) document.getElementById('ppdb-banner-badge').textContent = banner.badge;
+                    if (banner.title) document.getElementById('ppdb-banner-title').textContent = banner.title;
+                    if (banner.desc) document.getElementById('ppdb-banner-desc').textContent = banner.desc;
+                    if (banner.bgImg) document.getElementById('ppdb-banner-bg').src = banner.bgImg;
+                    if (banner.buttonText) document.getElementById('ppdb-banner-btn').innerHTML = `${banner.buttonText} <i class="fa-solid fa-arrow-right text-xs"></i>`;
+                }
+
                 if (data.kesiswaan.spmbInfo) document.getElementById('spmb-info-text').textContent = data.kesiswaan.spmbInfo;
                 if (data.kesiswaan.spmbStatusNotice) document.getElementById('spmb-notice-text').textContent = data.kesiswaan.spmbStatusNotice;
                 if (data.kesiswaan.spmbSyarat) document.getElementById('spmb-syarat-list').innerHTML = data.kesiswaan.spmbSyarat.map(s => `<li>${s}</li>`).join('');
@@ -1094,6 +1194,9 @@
                 document.getElementById('lulusan-kedinasan').textContent = data.lulusan.kedinasan || "12%";
                 document.getElementById('lulusan-kerja').textContent = data.lulusan.kerja || "6%";
             }
+
+            // Re-trigger scroll observer for dynamically injected elements
+            setTimeout(initScrollObserver, 100);
         }
 
         // Dynamic Dropdown Toggle
@@ -1138,6 +1241,8 @@
             } catch(e) {
                 window.scrollTo(0, 0);
             }
+
+            setTimeout(initScrollObserver, 50);
         }
 
         // Open Detail Reader
