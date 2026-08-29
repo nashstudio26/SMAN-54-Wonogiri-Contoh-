@@ -5,7 +5,11 @@
     "subTagline": "Unggul, Berkarakter & Berbudaya",
     "motto": "Mencetak generasi cerdas, berkarakter luhur, dan berdaya saing global melalui pendidikan berkualitas yang berwawasan lingkungan di Kabupaten Wonogiri.",
     "logo": "https://lh3.googleusercontent.com/d/1ZD3BQxowpqMtcOIj-glz-XXb9ukhuLYM",
-    "heroBg": "https://lh3.googleusercontent.com/d/1DqqeKbhR8xQP6iVPfH8C_rtMk8bok50Y",
+    "heroBg": "https://lh3.googleusercontent.com/d/1Lq33TB6_fj2QqyCODw2vqRIWj9pjhv9_",
+    "heroBgList": [
+      "https://lh3.googleusercontent.com/d/1Lq33TB6_fj2QqyCODw2vqRIWj9pjhv9_",
+      "https://lh3.googleusercontent.com/d/1svsk5uNovs_tWnvDOzTFFSrGBjPcR_iV"
+    ],
     "npsn": "20395400",
     "akreditasi": "A (Unggul)",
     "skAkreditasi": "BAN-S/M No. 1347/BAN-SM/SK/2023 (Nilai 96 - Akreditasi A)",
@@ -16,9 +20,9 @@
     "email": "operator@sman54wonogiri.sch.id"
   },
   "kepalaSekolah": {
-    "nama": "Purbaya Yudhi Sadewa, Ph.D.",
+    "nama": "Dr. H. Anies Baswedan,S.E.",
     "jabatan": "Kepala SMA Negeri 54 Wonogiri",
-    "foto": "https://lh3.googleusercontent.com/d/1sn_xr2dBKwPg4sr3MgDK-1m-IqHXw3Ho",
+    "foto": "https://lh3.googleusercontent.com/d/13Vg2YyDqNqYgeiIZ5kL1SMqjVdNEX7Z9",
     "sambutan": [
       "Assalamu'alaikum Warahmatullahi Wabarakatuh. Puji syukur kita panjatkan ke hadirat Allah SWT, Tuhan Yang Maha Esa. Selamat datang di portal resmi SMA Negeri 54 Wonogiri.",
       "Kami berkomitmen untuk terus meningkatkan mutu pendidikan, menanamkan nilai-nilai luhur budaya, serta membekali siswa-siswi dengan keterampilan yang relevan dalam menghadapi tantangan global. Melalui semangat kekeluargaan dan dedikasi tinggi dari seluruh tenaga pendidik, kami siap membimbing putra-putri bangsa menuju masa depan yang gemilang."
@@ -162,6 +166,13 @@
     "bkDesc": "Unit Bimbingan dan Konseling SMAN 54 Wonogiri menyediakan konsultasi personal, bimbingan studi lanjut, pemetaan bakat minat, serta dukungan pendampingan psikologis dalam suasana yang ramah, profesional, dan menjaga kerahasiaan siswa."
   },
   "kesiswaan": {
+    "ppdbBanner": {
+      "badge": "PORTAL PENDAFTARAN",
+      "title": "Penerimaan Peserta Didik Baru (PPDB)",
+      "desc": "Bergabunglah bersama keluarga besar SMA Negeri 54 Wonogiri. Temukan informasi lengkap mengenai alur, syarat, dan jadwal pendaftaran di Portal SPMB SMAN 54.",
+      "bgImg": "https://lh3.googleusercontent.com/d/1596KUHbo51SE5fLgYvBvOf6DpC1fIMxF",
+      "buttonText": "Masuk Portal SPMB"
+    },
     "spmbInfo": "Pendaftaran siswa baru SMA Negeri 54 Wonogiri dibuka melalui 4 jalur: Jalur Zonasi, Jalur Prestasi, Jalur Afirmasi, dan Jalur Perpindahan Tugas Orang Tua.",
     "spmbStatusNotice": "Pendaftaran saat ini ditutup. Kami akan menginformasikan melalui portal resmi ini ketika pendaftaran gelombang berikutnya resmi dibuka.",
     "spmbSyarat": [
