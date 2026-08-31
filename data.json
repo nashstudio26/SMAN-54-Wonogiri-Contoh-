@@ -8,7 +8,7 @@
     "heroBg": "https://lh3.googleusercontent.com/d/1Lq33TB6_fj2QqyCODw2vqRIWj9pjhv9_",
     "heroBgList": [
       "https://lh3.googleusercontent.com/d/1Lq33TB6_fj2QqyCODw2vqRIWj9pjhv9_",
-      "https://lh3.googleusercontent.com/d/1svsk5uNovs_tWnvDOzTFFSrGBjPcR_iV"
+      "https://lh3.googleusercontent.com/d/1QsXoQvjN4gTvMa0xujhXEEe4lqsv8hiE"
     ],
     "npsn": "20395400",
     "akreditasi": "A (Unggul)",
@@ -20,7 +20,7 @@
     "email": "operator@sman54wonogiri.sch.id"
   },
   "kepalaSekolah": {
-    "nama": "Dr. H. Anies Baswedan,S.E.",
+    "nama": "Dr. H. Anies Rasyid Baswedan, M.Pd.",
     "jabatan": "Kepala SMA Negeri 54 Wonogiri",
     "foto": "https://lh3.googleusercontent.com/d/13Vg2YyDqNqYgeiIZ5kL1SMqjVdNEX7Z9",
     "sambutan": [
@@ -111,7 +111,7 @@
       "title": "Pertahankan Piala Bergilir, SMAN 54 Wonogiri Sukses Raih Juara Umum LKTI Remaja",
       "img": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=1000",
       "summary": "Tim Karya Ilmiah Remaja (KIR) SMAN 54 Wonogiri berhasil mempertahankan piala bergilir Lomba Karya Tulis Ilmiah (LKTI) Lingkungan se-Jawa Tengah.",
-      "body": "<p class=\"font-medium text-base sm:text-xl text-slate-800\">Tim Karya Ilmiah Remaja (KIR) SMAN 54 Wonogiri berhasil mempertahankan piala bergilir Lomba Karya Tulis Ilmiah (LKTI) Lingkungan se-Jawa Tengah dengan membawakan penelitian inovatif berjudul \"Pemanfaatan Eceng Gondok Waduk Gajah Mungkur sebagai Bio-Komposit Ramah Lingkungan\".Penelitian ini mendapatkan apresiasi tinggi dari para dewan juri akademisi karena menawarkan solusi nyata bagi ekosistem waduk sekaligus memiliki nilai ekonomi tinggi bagi masyarakat lokal."
+      "body": "<p class=\"font-medium text-base sm:text-xl text-slate-800\">Tim Karya Ilmiah Remaja (KIR) SMAN 54 Wonogiri berhasil mempertahankan piala bergilir Lomba Karya Tulis Ilmiah (LKTI) Lingkungan se-Jawa Tengah dengan membawakan penelitian inovatif berjudul \"Pemanfaatan Eceng Gondok Waduk Gajah Mungkur sebagai Bio-Komposit Ramah Lingkungan\".Penelitian ini mendapatkan apresiation tinggi dari para dewan juri akademisi karena menawarkan solusi nyata bagi ekosistem waduk sekaligus memiliki nilai ekonomi tinggi bagi masyarakat lokal."
     }
   ],
   "profil": {
@@ -151,17 +151,31 @@
     "kurikulumJudul": "Implementasi Penuh Kurikulum Merdeka",
     "kurikulumDesc": "Kurikulum yang diterapkan di SMAN 54 Wonogiri berfokus pada pengembangan materi esensial, karakter Pelajar Pancasila, serta fleksibilitas bagi peserta didik kelas XI dan XII dalam menentukan mata pelajaran pilihan sesuai jurusan impian di perguruan tinggi.",
     "mapelUmum": [
-      "Pendidikan Agama & Budi Pekerti",
-      "Pendidikan Pancasila",
-      "Bahasa Indonesia & Bahasa Jawa (Muatan Lokal)",
-      "Bahasa Inggris",
-      "Matematika Dasar & Kemampuan Analitik",
-      "Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK)"
+      "Pendidikan Agama Islam & Budi Pekerti",
+      "Pendidikan Agama Kristen & Budi Pekerti",
+      "Pendidikan Agama Katolik & Budi Pekerti",
+      "Pendidikan Pancasila & Kewarganegaraan (PPKn)",
+      "Bahasa Indonesia",
+      "Bahasa Jawa (Muatan Lokal Wajib Jawa Tengah)",
+      "Bahasa Inggris Dasar & Terapan",
+      "Matematika Umum & Penalaran Logis",
+      "Sejarah Indonesia & Kebudayaan",
+      "Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK)",
+      "Seni Budaya (Seni Rupa, Seni Musik, Seni Tari, & Karawitan)",
+      "Bimbingan & Konseling (Pengembangan Diri & Karir)"
     ],
     "mapelPeminatan": [
-      "Matematika Tingkat Lanjut, Fisika, Kimia, Biologi",
-      "Ekonomi, Sosiologi, Geografi, Sejarah Tingkat Lanjut",
-      "Informatika & Pemrograman Terapan"
+      "Matematika Tingkat Lanjut & Kalkulus Terapan",
+      "Fisika Eksperimental & Teknologi Energi",
+      "Kimia Anorganik & Bio-Kimia",
+      "Biologi Konservasi & Ekologi Lingkungan",
+      "Informatika, Pemrograman & Digital Creative",
+      "Ekonomi, Akuntansi & Kewirausahaan Mandiri",
+      "Sosiologi & Metodologi Riset Masyarakat",
+      "Geografi, GIS & Penginderaan Jauh",
+      "Sejarah Tingkat Lanjut & Geopolitik Dunia",
+      "Bahasa & Sastra Inggris Lanjutan",
+      "Bahasa & Sastra Jawa Lanjutan (Aksara & Krama Inggil)"
     ],
     "bkDesc": "Unit Bimbingan dan Konseling SMAN 54 Wonogiri menyediakan konsultasi personal, bimbingan studi lanjut, pemetaan bakat minat, serta dukungan pendampingan psikologis dalam suasana yang ramah, profesional, dan menjaga kerahasiaan siswa."
   },
@@ -201,40 +215,134 @@
     "osisDesc": "Organisasi Siswa Intra Sekolah (OSIS) dan Majelis Permusyawaratan Kelas (MPK) SMAN 54 Wonogiri menjadi motor penggerak kreativitas, kedisiplinan, dan kepemimpinan pemuda dalam menyelenggarakan ajang pekan seni, turnamen olahraga, dan bakti sosial kemasyarakatan.",
     "ekskulList": [
       "Pramuka Wajib",
-      "Paskibra",
-      "PMR & KSR",
-      "Karya Ilmiah Remaja",
-      "Basket & Futsal",
-      "Karawitan & Seni Tari",
-      "English Debate Club",
-      "Coding & Multimedia"
+      "Paskibraka",
+      "PMR & KSR Red Cross",
+      "Karya Ilmiah Remaja (KIR)",
+      "Basket & Futsal Club",
+      "Seni Karawitan & Tari Tradisional",
+      "English Debate & Toastmaster",
+      "Coding, Web & Multimedia",
+      "Pencak Silat & Beladiri",
+      "Vocal Group & Paduan Suara",
+      "Pencinta Alam & Green Squad",
+      "Jurnalistik & Fotografi Sekolah"
     ],
     "tatatertibDesc": "Seluruh peserta didik SMA Negeri 54 Wonogiri wajib mematuhi ketentuan tata tertib yang berlaku: hadir di sekolah sebelum pukul 07.00 WIB, mengenakan seragam rapi dan atribut lengkap sesuai hari, menjaga sopan santun serta etika terhadap bapak/ibu guru dan sesama teman, serta menjaga kelestarian lingkungan sekolah."
   },
   "gtk": [
     {
-      "nama": "Siti Rahmawati, S.Pd.",
-      "role": "Guru Matematika",
+      "nama": "Dr. H. Anies Rasyid Baswedan, M.Pd.",
+      "role": "Kepala Sekolah",
+      "nip": "NIP. 19690507 199503 1 001",
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
+    },
+    {
+      "nama": "Siti Rahmawati, S.Pd., M.M.",
+      "role": "Wakasek Kurikulum & Guru Matematika",
       "nip": "NIP. 19850312 201001 2 015",
-      "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300"
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
     },
     {
       "nama": "Budi Santoso, M.T.",
-      "role": "Guru Fisika & TIK",
+      "role": "Wakasek Kesiswaan & Guru Fisika",
       "nip": "NIP. 19790822 200501 1 008",
-      "foto": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300"
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
     },
     {
-      "nama": "Dewi Lestari, S.S.",
-      "role": "Guru Bahasa Inggris",
+      "nama": "Dewi Lestari, S.S., M.Hum.",
+      "role": "Wakasek Sarpras & Guru Bahasa Inggris",
       "nip": "NIP. 19900105 201503 2 004",
-      "foto": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&q=80&w=300"
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
     },
     {
       "nama": "Eko Prasetyo, S.Pd.",
       "role": "Kepala Tata Usaha",
       "nip": "NIP. 19820418 200802 1 003",
-      "foto": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300"
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
+    },
+    {
+      "nama": "Bambang Wijaya, S.Pd.",
+      "role": "Guru Kimia & Pembina KIR",
+      "nip": "NIP. 19810614 200901 1 010",
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
+    },
+    {
+      "nama": "Sri Wahyuni, M.Pd.",
+      "role": "Guru Biologi & Pembina Adiwiyata",
+      "nip": "NIP. 19840920 201101 2 009",
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
+    },
+    {
+      "nama": "Agus Setiawan, S.Kom.",
+      "role": "Guru TIK, Informatika & Lab Komputer",
+      "nip": "NIP. 19881103 201402 1 005",
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
+    },
+    {
+      "nama": "Rina Kurniawati, S.Pd.",
+      "role": "Guru Bahasa Indonesia",
+      "nip": "NIP. 19870215 201201 2 007",
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
+    },
+    {
+      "nama": "Dwi Handoko, S.Pd.",
+      "role": "Guru PJOK & Pembina Olahraga",
+      "nip": "NIP. 19830528 200801 1 012",
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
+    },
+    {
+      "nama": "Tri Astuti, S.Pd.",
+      "role": "Guru Sejarah Indonesia",
+      "nip": "NIP. 19860410 201002 2 011",
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
+    },
+    {
+      "nama": "Joko Susilo, S.E., M.Si.",
+      "role": "Guru Ekonomi & Kewirausahaan",
+      "nip": "NIP. 19781201 200604 1 006",
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
+    },
+    {
+      "nama": "Nur Hidayah, S.Pd.I.",
+      "role": "Guru Pendidikan Agama Islam",
+      "nip": "NIP. 19890719 201502 2 008",
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
+    },
+    {
+      "nama": "Hendra Pratama, S.Pd.",
+      "role": "Guru Geografi & GIS",
+      "nip": "NIP. 19910325 201801 1 004",
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
+    },
+    {
+      "nama": "Maya Indah, S.Pd.",
+      "role": "Guru Sosiologi",
+      "nip": "NIP. 19920814 201903 2 010",
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
+    },
+    {
+      "nama": "Ahmad Fauzi, S.Pd.",
+      "role": "Guru Seni Budaya & Pembina Karawitan",
+      "nip": "NIP. 19861005 201102 1 007",
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
+    },
+    {
+      "nama": "Retno Palupi, S.Pd.",
+      "role": "Guru Bahasa Jawa (Muatan Lokal)",
+      "nip": "NIP. 19880112 201401 2 006",
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
+    },
+    {
+      "nama": "Drs. Yohanes Subagyo",
+      "role": "Guru Pendidikan Agama Katolik",
+      "nip": "NIP. 19700318 199802 1 002",
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
+    },
+    {
+      "nama": "Endang Setyowati, S.Psi.",
+      "role": "Guru Bimbingan & Konseling",
+      "nip": "NIP. 19900512 201601 2 005",
+      "foto": "https://lh3.googleusercontent.com/d/1Rr1M9Wz5Z9LIQmuQnLql4ra0E_TcBINu"
     }
   ],
   "sarpras": [
