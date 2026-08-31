@@ -53,10 +53,10 @@
         .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
         .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
-        /* Smooth Soft Reveal-on-Scroll Animations */
+        /* Smooth Reveal-on-Scroll Animations */
         .reveal-on-scroll {
             opacity: 0;
-            transform: translateY(28px);
+            transform: translateY(24px);
             transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
             will-change: opacity, transform;
         }
@@ -228,7 +228,7 @@
         <div id="beranda" class="page-section active">
             <!-- Hero Banner Section (Dynamic 2-Image 5s Carousel) -->
             <section class="relative bg-slate-950 text-white overflow-hidden py-16 sm:py-28 lg:py-36">
-                <!-- Dynamic Image Slideshow Container (Pre-rendered for instant background display) -->
+                <!-- Dynamic Image Slideshow Container -->
                 <div id="hero-slider-container" class="absolute inset-0 z-0 overflow-hidden">
                     <img src="https://lh3.googleusercontent.com/d/1Lq33TB6_fj2QqyCODw2vqRIWj9pjhv9_" class="hero-slide active-slide" alt="Slide Background SMAN 54 Wonogiri 1" onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1Lq33TB6_fj2QqyCODw2vqRIWj9pjhv9_&sz=w1600';">
                     <img src="https://lh3.googleusercontent.com/d/1QsXoQvjN4gTvMa0xujhXEEe4lqsv8hiE" class="hero-slide" alt="Slide Background SMAN 54 Wonogiri 2" onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1QsXoQvjN4gTvMa0xujhXEEe4lqsv8hiE&sz=w1600';">
@@ -240,7 +240,7 @@
                 <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center">
                     <div class="max-w-3xl flex flex-col items-center">
                         <!-- Custom Sharp-Corner Rectangle Badge -->
-                        <div class="inline-block bg-[#c2410c] text-white font-extrabold text-xs sm:text-xs uppercase tracking-widest px-4 py-1.5 rounded-none mb-4 sm:mb-6 shadow-md mx-auto">
+                        <div class="inline-block bg-[#c2410c] text-white font-extrabold text-xs uppercase tracking-widest px-4 py-1.5 rounded-none mb-4 sm:mb-6 shadow-md mx-auto">
                             Website Resmi
                         </div>
                         
@@ -354,7 +354,7 @@
                 </div>
             </section>
 
-            <!-- Banner SPMB / PPDB (Dynamic Background Image & Content Editable via data.json) -->
+            <!-- Banner SPMB / PPDB -->
             <section class="relative bg-slate-900 text-white py-10 sm:py-16 overflow-hidden reveal-on-scroll">
                 <div class="absolute inset-0 z-0">
                     <img id="ppdb-banner-bg" src="https://lh3.googleusercontent.com/d/1596KUHbo51SE5fLgYvBvOf6DpC1fIMxF" alt="PPDB SMAN 54 Wonogiri" class="w-full h-full object-cover opacity-25"
@@ -404,9 +404,9 @@
             </section>
         </div>
 
-        <!-- DEDICATED FULL ARTICLE READING VIEW -->
+        <!-- DEDICATED FULL ARTICLE READING VIEW FOR BERITA -->
         <div id="halaman-artikel" class="page-section max-w-4xl mx-auto px-4 py-8 sm:py-16">
-            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-4 py-2.5 rounded-xl mb-6 sm:mb-8 transition">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-4 py-2.5 rounded-xl mb-6 sm:mb-8 transition">
                 <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
             </button>
             
@@ -425,7 +425,7 @@
                     <img id="art-img" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1000" class="w-full h-56 sm:h-96 object-cover">
                 </div>
 
-                <div id="art-body" class="prose prose-slate max-w-none text-slate-700 text-base sm:text-lg leading-relaxed space-y-4 sm:space-y-6">
+                <div id="art-body" class="prose prose-slate max-w-none text-slate-700 text-sm sm:text-base leading-relaxed space-y-4 sm:space-y-6">
                     <!-- Dynamic Body Content -->
                 </div>
             </article>
@@ -433,6 +433,9 @@
 
         <!-- 2. SUB-HALAMAN PROFIL -->
         <div id="profil-sejarah" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-4 sm:mb-6 transition">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </button>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4 sm:mb-6 border-l-4 border-brand-500 pl-3 sm:pl-4">Sejarah Singkat SMAN 54 Wonogiri</h2>
             <div id="profil-sejarah-body" class="bg-white p-5 sm:p-8 rounded-2xl shadow-sm border border-slate-100 leading-relaxed text-slate-700 text-sm sm:text-base space-y-3 sm:space-y-4">
                 <!-- Dynamic Content -->
@@ -440,6 +443,9 @@
         </div>
 
         <div id="profil-visi-misi" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-4 sm:mb-6 transition">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </button>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4 sm:mb-6 border-l-4 border-brand-500 pl-3 sm:pl-4">Visi & Misi Sekolah</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
                 <div class="bg-brand-50 p-5 sm:p-8 rounded-2xl border border-brand-100">
@@ -456,6 +462,9 @@
         </div>
 
         <div id="profil-struktur" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-4 sm:mb-6 transition">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </button>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4 sm:mb-6 border-l-4 border-brand-500 pl-3 sm:pl-4">Struktur Organisasi</h2>
             <div class="bg-white p-5 sm:p-8 rounded-2xl border border-slate-100 shadow-sm text-center">
                 <img id="profil-struktur-img" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1000" class="mx-auto rounded-xl border max-w-full h-auto mb-3 sm:mb-4" alt="Diagram Organisasi">
@@ -464,6 +473,9 @@
         </div>
 
         <div id="profil-program" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-4 sm:mb-6 transition">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </button>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4 sm:mb-6 border-l-4 border-brand-500 pl-3 sm:pl-4">Program Unggulan</h2>
             <div id="profil-program-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
                 <!-- Dynamic Program Unggulan -->
@@ -471,6 +483,9 @@
         </div>
 
         <div id="profil-akreditasi" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-4 sm:mb-6 transition">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </button>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4 sm:mb-6 border-l-4 border-brand-500 pl-3 sm:pl-4">Status Akreditasi & Data Dapodik</h2>
             <div class="bg-white p-5 sm:p-8 rounded-2xl border border-slate-100 shadow-sm flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
                 <div class="w-24 h-24 sm:w-32 sm:h-32 bg-brand-500 text-white rounded-2xl flex flex-col items-center justify-center font-extrabold shrink-0 shadow-lg">
@@ -486,6 +501,9 @@
         </div>
 
         <div id="profil-komite" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-4 sm:mb-6 transition">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </button>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4 sm:mb-6 border-l-4 border-brand-500 pl-3 sm:pl-4">Komite Sekolah</h2>
             <div class="bg-white p-5 sm:p-8 rounded-2xl border border-slate-100 shadow-sm">
                 <p id="profil-komite-text" class="text-slate-700 text-sm sm:text-base leading-relaxed">Komite SMAN 54 Wonogiri merupakan wadah musyawarah dan sinergi antara pihak orang tua siswa, tokoh masyarakat Wonogiri, dan praktisi pendidikan guna terus mengawal transparansi, pengembangan sarana fisik, dan kenyamanan kegiatan belajar mengajar.</p>
@@ -494,6 +512,9 @@
 
         <!-- 3. AKADEMIK & KESISWAAN -->
         <div id="akademik-kurikulum" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-4 sm:mb-6 transition">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </button>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4 sm:mb-6 border-l-4 border-brand-500 pl-3 sm:pl-4">Kurikulum Resmi</h2>
             <div class="bg-white p-5 sm:p-8 rounded-2xl border border-slate-100 shadow-sm">
                 <h3 id="akademik-kurikulum-judul" class="font-bold text-lg sm:text-2xl text-slate-900 mb-2 sm:mb-3">Implementasi Penuh Kurikulum Merdeka</h3>
@@ -502,6 +523,9 @@
         </div>
 
         <div id="akademik-mapel" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-4 sm:mb-6 transition">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </button>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4 sm:mb-6 border-l-4 border-brand-500 pl-3 sm:pl-4">Daftar Mata Pelajaran</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-100 shadow-sm">
@@ -520,6 +544,9 @@
         </div>
 
         <div id="akademik-bk" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-4 sm:mb-6 transition">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </button>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4 sm:mb-6 border-l-4 border-brand-500 pl-3 sm:pl-4">Bimbingan Konseling (BK)</h2>
             <div class="bg-white p-5 sm:p-8 rounded-2xl border border-slate-100 shadow-sm leading-relaxed text-slate-700 text-sm sm:text-base">
                 <p id="akademik-bk-text">Unit Bimbingan dan Konseling SMAN 54 Wonogiri menyediakan konsultasi personal, bimbingan studi lanjut, pemetaan bakat minat, serta dukungan pendampingan psikologis dalam suasana yang ramah, profesional, dan menjaga kerahasiaan siswa.</p>
@@ -527,6 +554,9 @@
         </div>
 
         <div id="kesiswaan-spmb" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-4 sm:mb-6 transition">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </button>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4 sm:mb-6 border-l-4 border-brand-500 pl-3 sm:pl-4">Portal SPMB / PPDB 2026</h2>
             <div class="bg-white p-5 sm:p-8 rounded-2xl border border-slate-100 shadow-sm space-y-4 sm:space-y-6">
                 <div class="bg-brand-50 p-4 sm:p-6 rounded-xl border border-brand-200">
@@ -556,6 +586,9 @@
         </div>
 
         <div id="kesiswaan-prestasi" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-4 sm:mb-6 transition">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </button>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4 sm:mb-6 border-l-4 border-brand-500 pl-3 sm:pl-4">Galeri Prestasi Siswa</h2>
             <div id="prestasi-galeri-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
                 <!-- Dynamic Prestasi Cards -->
@@ -563,6 +596,9 @@
         </div>
 
         <div id="kesiswaan-osis" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-4 sm:mb-6 transition">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </button>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4 sm:mb-6 border-l-4 border-brand-500 pl-3 sm:pl-4">OSIS & MPK</h2>
             <div class="bg-white p-5 sm:p-8 rounded-2xl border border-slate-100 shadow-sm leading-relaxed text-slate-700 text-sm sm:text-base">
                 <p id="osis-text">Organisasi Siswa Intra Sekolah (OSIS) dan Majelis Permusyawaratan Kelas (MPK) SMAN 54 Wonogiri menjadi motor penggerak kreativitas, kedisiplinan, dan kepemimpinan pemuda dalam menyelenggarakan ajang pekan seni, turnamen olahraga, dan bakti sosial kemasyarakatan.</p>
@@ -570,6 +606,9 @@
         </div>
 
         <div id="kesiswaan-ekskul" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-4 sm:mb-6 transition">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </button>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4 sm:mb-6 border-l-4 border-brand-500 pl-3 sm:pl-4">Ekstrakulikuler Unggulan</h2>
             <div id="ekskul-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
                 <!-- Dynamic Ekskul Cards -->
@@ -577,6 +616,9 @@
         </div>
 
         <div id="kesiswaan-tatatertib" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-4 sm:mb-6 transition">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </button>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4 sm:mb-6 border-l-4 border-brand-500 pl-3 sm:pl-4">Tata Tertib Sekolah</h2>
             <div class="bg-white p-5 sm:p-8 rounded-2xl border border-slate-100 shadow-sm text-sm sm:text-base text-slate-700 space-y-2 sm:space-y-3 leading-relaxed">
                 <p id="tatatertib-text">Seluruh peserta didik SMA Negeri 54 Wonogiri wajib mematuhi ketentuan tata tertib yang berlaku: hadir di sekolah sebelum pukul 07.00 WIB, mengenakan seragam rapi dan atribut lengkap sesuai hari, menjaga sopan santun serta etika terhadap bapak/ibu guru dan sesama teman, serta menjaga kelestarian lingkungan sekolah.</p>
@@ -585,6 +627,9 @@
 
         <!-- 4. DIREKTORI GTK -->
         <div id="gtk" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-4 sm:mb-6 transition">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </button>
             <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 sm:mb-8 gap-3 sm:gap-4">
                 <div>
                     <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 border-l-4 border-brand-500 pl-3 sm:pl-4">Direktori Guru & GTK</h2>
@@ -600,6 +645,9 @@
 
         <!-- 5. SARPRAS & LULUSAN -->
         <div id="sarpras" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-4 sm:mb-6 transition">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </button>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4 sm:mb-6 border-l-4 border-brand-500 pl-3 sm:pl-4">Sarana & Prasarana</h2>
             <div id="sarpras-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
                 <!-- Dynamic Sarpras Cards -->
@@ -607,6 +655,9 @@
         </div>
 
         <div id="lulusan" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-4 sm:mb-6 transition">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </button>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4 sm:mb-6 border-l-4 border-brand-500 pl-3 sm:pl-4">Profil Lulusan & Sebaran Alumni</h2>
             <div class="bg-white p-5 sm:p-8 rounded-2xl border border-slate-100 shadow-sm text-center">
                 <div class="grid grid-cols-3 gap-3 sm:gap-6 mb-4 sm:mb-6">
@@ -619,6 +670,9 @@
 
         <!-- 6. LAYANAN PENGADUAN (DIRECT TO WHATSAPP) -->
         <div id="pengaduan" class="page-section max-w-7xl mx-auto px-4 py-8 sm:py-16">
+            <button type="button" onclick="navigateTo('beranda')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 bg-brand-50 px-3.5 py-2 rounded-xl mb-4 sm:mb-6 transition">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </button>
             <div class="max-w-3xl mx-auto">
                 <div class="mb-6 sm:mb-8 text-center sm:text-left">
                     <div class="inline-block bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-bold px-3 py-1 rounded-full mb-2">
@@ -725,6 +779,36 @@
         </div>
     </footer>
 
+    <!-- POPUP MODAL UNTUK AKTIVITAS / GALERI SISWA -->
+    <div id="aktivitas-modal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl sm:rounded-3xl max-w-2xl w-full shadow-2xl border border-slate-100 overflow-hidden my-auto relative animate-fadeIn">
+            <!-- Modal Header / Image -->
+            <div class="relative h-48 sm:h-72 overflow-hidden bg-slate-900">
+                <img id="akt-modal-img" src="" class="w-full h-full object-cover">
+                <button type="button" onclick="closeAktivitasModal()" class="absolute top-3 right-3 sm:top-4 sm:right-4 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-900/60 hover:bg-slate-900 text-white flex items-center justify-center transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+                <span id="akt-modal-badge" class="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 bg-brand-500 text-white font-bold text-xs uppercase px-2.5 py-1 rounded-md">GALERI</span>
+            </div>
+
+            <!-- Modal Content -->
+            <div class="p-5 sm:p-8 space-y-3">
+                <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-400">
+                    <span id="akt-modal-date"><i class="fa-regular fa-calendar mr-1"></i> 18 Agustus 2026</span>
+                    <span id="akt-modal-author"><i class="fa-regular fa-user mr-1"></i> Pembina Sekolah</span>
+                </div>
+                <h3 id="akt-modal-title" class="text-xl sm:text-2xl font-bold text-slate-900 leading-tight">Judul Aktivitas Siswa</h3>
+                <p id="akt-modal-desc" class="text-sm sm:text-base text-slate-700 leading-relaxed pt-1">Deskripsi aktivitas siswa...</p>
+                
+                <div class="pt-4 border-t border-slate-100 flex justify-end">
+                    <button type="button" onclick="closeAktivitasModal()" class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs sm:text-sm px-5 py-2.5 rounded-xl transition">
+                        Tutup Galeri
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- CUSTOM TOAST NOTIFICATION -->
     <div id="custom-toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
         <div class="bg-slate-900 text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-slate-800 flex items-center gap-3">
@@ -783,7 +867,7 @@
                     title: "Peringatan Hari Pramuka & Kemah Bakti Konservasi Wonogiri",
                     img: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=1000",
                     summary: "Siswa-siswi SMAN 54 Wonogiri diterjunkan langsung dalam program reboisasi lereng perbukitan dan bakti kebersihan Waduk Gajah Mungkur.",
-                    body: "<p class=\"font-medium text-base sm:text-xl text-slate-800\">Dalam rangka memperingati Hari Pramuka ke-65, Gugus Depan SMAN 54 Wonogiri menyelenggarakan Kemah Bakti Lingkungan selama tiga hari bertempat di pesisir Waduk Gajah Mungkur, Wonogiri.</p><p>Kegiatan ini diikuti oleh seluruh anggota penegak kelas X dan XI dengan agenda utama penanaman 1.000 bibit pohon mahoni dan trembesi di daerah resapan air, penyuluhan pilah sampah organik-anorganik kepada warga sekitar waduk, serta malam api unggun budaya yang menampilkan pentas kreasi seni daerah.</p><p>Melalui kemah bakti ini, para siswa tidak hanya dilatih mandiri dan tangguh di alam terbuka, namun juga ditanamkan rasa tanggung jawab moral untuk merawat kelestarian sumber daya alam di tanah kelahiran mereka.</p>"
+                    desc: "Dalam rangka memperingati Hari Pramuka ke-65, Gugus Depan SMAN 54 Wonogiri menyelenggarakan Kemah Bakti Lingkungan selama tiga hari bertempat di pesisir Waduk Gajah Mungkur, Wonogiri. Kegiatan ini diikuti oleh seluruh anggota penegak kelas X dan XI dengan agenda utama penanaman 1.000 bibit pohon mahoni dan trembesi di daerah resapan air, penyuluhan pilah sampah organik-anorganik kepada warga sekitar waduk, serta malam api unggun budaya yang menampilkan pentas kreasi seni daerah."
                 },
                 {
                     id: "aktivitas-2",
@@ -794,7 +878,7 @@
                     title: "Kegiatan Sosialisasi Program Sekolah Adiwiyata Ramah Lingkungan",
                     img: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=1000",
                     summary: "Pelatihan pengelolaan bank sampah sekolah serta pembuatan instalasi biopori mandiri oleh kader hijau OSIS SMAN 54.",
-                    body: "<p class=\"font-medium text-base sm:text-xl text-slate-800\">Menyambut tahun ajaran baru, Tim Adiwiyata SMAN 54 Wonogiri menyelenggarakan lokakarya bertema \"Gerakan Sekolah Bersih dan Cerdas Berkelanjutan\" yang dihadiri oleh seluruh pengurus kelas dan perwakilan ekstrakurikuler.</p><p>Sosialisasi ini mengulas tata cara pemilahan sampah di sumbernya menggunakan sistem kode warna, pembuatan kompos daun dengan metode komposter anaerob, serta pemanfaatan aplikasi pencatatan tabungan sampah digital sekolah yang bekerja sama dengan bank sampah binaan Pemkab Wonogiri.</p>"
+                    desc: "Menyambut tahun ajaran baru, Tim Adiwiyata SMAN 54 Wonogiri menyelenggarakan lokakarya bertema \"Gerakan Sekolah Bersih dan Cerdas Berkelanjutan\" yang dihadiri oleh seluruh pengurus kelas dan perwakilan ekstrakurikuler. Sosialisasi ini mengulas tata cara pemilahan sampah di sumbernya menggunakan sistem kode warna, pembuatan kompos daun dengan metode komposter anaerob, serta pemanfaatan aplikasi pencatatan tabungan sampah digital sekolah."
                 },
                 {
                     id: "aktivitas-3",
@@ -805,7 +889,7 @@
                     title: "Pelaksanaan Bina Karakter & Unggah-Ungguh Budaya Jawa",
                     img: "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=1000",
                     summary: "Kegiatan intensif pembentukan budi pekerti luhur, etika berbicara, dan penghormatan kepada orang tua bagi murid angkatan baru.",
-                    body: "<p class=\"font-medium text-base sm:text-xl text-slate-800\">Sebagai wujud pelestarian tradisi luhur di Kabupaten Wonogiri, SMAN 54 secara berkala mengadakan program Bina Karakter Budi Pekerti dan Pelatihan Bahasa Jawa Krama Inggil bagi seluruh peserta didik.</p><p>Kegiatan yang dimentori langsung oleh budayawan dan pengajar bahasa daerah ini melatih adab sopan santun kepada yang lebih tua, tata krama berbicara dalam pergaulan sehari-hari, serta penulisan aksara Jawa, agar para siswa tetap memiliki akar identitas budaya yang kuat di tengah era globalisasi yang serba modern.</p>"
+                    desc: "Sebagai wujud pelestarian tradisi luhur di Kabupaten Wonogiri, SMAN 54 secara berkala mengadakan program Bina Karakter Budi Pekerti dan Pelatihan Bahasa Jawa Krama Inggil bagi seluruh peserta didik. Kegiatan ini melatih adab sopan santun kepada yang lebih tua, tata krama berbicara dalam pergaulan sehari-hari, serta penulisan aksara Jawa."
                 }
             ],
             berita: [
@@ -818,7 +902,7 @@
                     title: "Mengukir Prestasi di Bidang Sains: Janitra Ayu Padmarini, Siswi SMAN 54 Wonogiri Raih Juara 1 OSN Matematika",
                     img: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1000",
                     summary: "Perjalanan Menuju Takhta Juara Prestasi membanggakan kembali diukir oleh generasi muda Kabupaten Wonogiri. Janitra Ayu Padmarini, siswi berbakat dari SMA Negeri 54 Wonogiri, berhasil menyabet gelar Juara 1 dalam ajang Olimpiade Sains Nasional tingkat Provinsi Jawa Tengah...",
-                    body: "<p class=\"font-medium text-base sm:text-xl text-slate-800\">Prestasi membanggakan kembali dipersembahkan oleh putra-putri terbaik SMA Negeri 54 Wonogiri di kancah provinsi. Janitra Ayu Padmarini, siswi kelas XI MIPA 1, sukses menyabet Juara 1 dalam perhelatan akbar Olimpiade Sains Nasional (OSN) bidang Matematika Tingkat Provinsi Jawa Tengah.</p><p>Kompetisi yang berlangsung ketat selama tiga hari ini diikuti oleh ratusan perwakilan sekolah menengah atas dari seluruh kabupaten/kota se-Jawa Tengah. Dengan dedikasi pembinaan intensif dan ketelitian menyelesaikan soal-soal teori bilangan, aljabar tinggi, dan kombinatorika, Janitra berhasil mengungguli pesaing lainnya dengan poin mutlak.</p><h3 class=\"text-xl sm:text-2xl font-bold text-slate-900 mt-6 mb-3\">Dukungan Sekolah dan Kerja Keras Pembina</h3><p>Kepala SMA Negeri 54 Wonogiri, Dr. H. Anies Rasyid Baswedan, M.Pd., menyampaikan apresiasi setinggi-tingginya kepada Janitra dan tim guru pembimbing sains sekolah. \"Keberhasilan ini merupakan bukti nyata bahwa kerja keras, disiplin, dan ekosistem belajar yang kondusif di SMAN 54 mampu melahirkan talenta unggul yang bersaing di level nasional,\" tutur beliau.</p><p>Janitra saat ini tengah mempersiapkan diri untuk melaju ke tahap pemusatan latihan nasional (Pelatnas) OSN tingkat nasional yang akan digelar di Jakarta pada bulan Oktober mendatang. Seluruh keluarga besar SMAN 54 Wonogiri mendoakan hasil terbaik bagi ananda tercinta.</p>"
+                    body: "<p>Prestasi membanggakan kembali dipersembahkan oleh putra-putri terbaik SMA Negeri 54 Wonogiri di kancah provinsi. Janitra Ayu Padmarini, siswi kelas XI MIPA 1, sukses menyabet Juara 1 dalam perhelatan akbar Olimpiade Sains Nasional (OSN) bidang Matematika Tingkat Provinsi Jawa Tengah.</p><p>Kompetisi yang berlangsung ketat selama tiga hari ini diikuti oleh ratusan perwakilan sekolah menengah atas dari seluruh kabupaten/kota se-Jawa Tengah. Dengan dedikasi pembinaan intensif dan ketelitian menyelesaikan soal-soal teori bilangan, aljabar tinggi, dan kombinatorika, Janitra berhasil mengungguli pesaing lainnya dengan poin mutlak.</p><h3 class=\"text-lg sm:text-2xl font-bold text-slate-900 mt-4 sm:mt-6 mb-2 sm:mb-3\">Dukungan Sekolah dan Kerja Keras Pembina</h3><p>Kepala SMA Negeri 54 Wonogiri, Dr. H. Anies Rasyid Baswedan, M.Pd., menyampaikan apresiasi setinggi-tingginya kepada Janitra dan tim guru pembimbing sains sekolah. \"Keberhasilan ini merupakan bukti nyata bahwa kerja keras, disiplin, dan ekosistem belajar yang kondusif di SMAN 54 mampu melahirkan talenta unggul yang bersaing di level nasional,\" tutur beliau.</p><p>Janitra saat ini tengah mempersiapkan diri untuk melaju ke tahap pemusatan latihan nasional (Pelatnas) OSN tingkat nasional yang akan digelar di Jakarta pada bulan Oktober mendatang. Seluruh keluarga besar SMAN 54 Wonogiri mendoakan hasil terbaik bagi ananda tercinta.</p>"
                 },
                 {
                     id: "berita-2",
@@ -829,7 +913,7 @@
                     title: "Banggakan Sekolah dan Daerah, Ferna Gavrila Patambo Siswi SMAN 54 Lolos DBL Jateng",
                     img: "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=1000",
                     summary: "Tim basket putri SMAN 54 Wonogiri kembali menorehkan tinta emas dalam kompetisi bergengsi Development Basketball League (DBL) regional Jawa Tengah.",
-                    body: "<p class=\"font-medium text-base sm:text-xl text-slate-800\">Tim basket putri SMAN 54 Wonogiri kembali menorehkan tinta emas dalam kompetisi bergengsi Development Basketball League (DBL) regional Jawa Tengah. Kapten tim, Ferna Gavrila Patambo, dinobatkan sebagai pemain terbaik (*MVP*) berkat performa luar biasa sepanjang turnamen.</p><p>Dalam laga semifinal yang berlangsung sengit di GOR Jatidiri, Ferna memimpin rekan-rekannya membalikkan keadaan di kuarter keempat hingga menundukkan tim unggulan lawan dengan skor dramatis 68-64.</p><h3 class=\"text-xl sm:text-2xl font-bold text-slate-900 mt-6 mb-3\">Semangat Sportivitas dan Solidaritas Tim</h3><p>Pelatih ekstrakurikuler basket SMAN 54 menyatakan bahwa kunci kemenangan tim adalah kekompakan dan latihan fisik rutin 4 kali seminggu yang dibarengi kedisiplinan belajar. Keberhasilan ini diharapkan menjadi inspirasi bagi adik-adik kelas untuk terus aktif berprestasi di bidang olahraga.</p>"
+                    body: "<p>Tim basket putri SMAN 54 Wonogiri kembali menorehkan tinta emas dalam kompetisi bergengsi Development Basketball League (DBL) regional Jawa Tengah. Kapten tim, Ferna Gavrila Patambo, dinobatkan sebagai pemain terbaik (MVP) berkat performa luar biasa sepanjang turnamen.</p><p>Dalam laga semifinal yang berlangsung sengit di GOR Jatidiri, Ferna memimpin rekan-rekannya membalikkan keadaan di kuarter keempat hingga menundukkan tim unggulan lawan dengan skor dramatis 68-64.</p><h3 class=\"text-lg sm:text-2xl font-bold text-slate-900 mt-4 sm:mt-6 mb-2 sm:mb-3\">Semangat Sportivitas dan Solidaritas Tim</h3><p>Pelatih ekstrakurikuler basket SMAN 54 menyatakan bahwa kunci kemenangan tim adalah kekompakan dan latihan fisik rutin 4 kali seminggu yang dibarengi kedisiplinan belajar. Keberhasilan ini diharapkan menjadi inspirasi bagi adik-adik kelas untuk terus aktif berprestasi di bidang olahraga.</p>"
                 },
                 {
                     id: "berita-3",
@@ -840,7 +924,7 @@
                     title: "Tangguh di Dinding Panjat, Atlet SMAN 54 Wonogiri Raih Emas O2SN Provinsi",
                     img: "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&q=80&w=1000",
                     summary: "Cabang olahraga panjat dinding kembali menyumbangkan medali emas bagi kontingen Wonogiri melalui kepiawaian atlet muda SMAN 54 pada O2SN.",
-                    body: "<p class=\"font-medium text-base sm:text-xl text-slate-800\">Cabang olahraga panjat dinding kembali menyumbangkan medali emas bagi kontingen Wonogiri melalui kepiawaian atlet muda SMAN 54 pada Olimpiade Olahraga Siswa Nasional (O2SN) Provinsi Jawa Tengah 2026.</p><p>Kecepatan dan ketepatan membaca jalur pemanjatan kategori *speed world record* mengantarkan atlet SMAN 54 mencatatkan waktu impresif 7.12 detik, sekaligus memecahkan rekor waktu kejuaraan tahun sebelumnya.</p>"
+                    body: "<p>Cabang olahraga panjat dinding kembali menyumbangkan medali emas bagi kontingen Wonogiri melalui kepiawaian atlet muda SMAN 54 pada Olimpiade Olahraga Siswa Nasional (O2SN) Provinsi Jawa Tengah 2026.</p><p>Kecepatan dan ketepatan membaca jalur pemanjatan kategori speed world record mengantarkan atlet SMAN 54 mencatatkan waktu impresif 7.12 detik, sekaligus memecahkan rekor waktu kejuaraan tahun sebelumnya.</p>"
                 },
                 {
                     id: "berita-4",
@@ -851,7 +935,7 @@
                     title: "Pertahankan Piala Bergilir, SMAN 54 Wonogiri Sukses Raih Juara Umum LKTI Remaja",
                     img: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=1000",
                     summary: "Tim Karya Ilmiah Remaja (KIR) SMAN 54 Wonogiri berhasil mempertahankan piala bergilir Lomba Karya Tulis Ilmiah (LKTI) Lingkungan se-Jawa Tengah.",
-                    body: "<p class=\"font-medium text-base sm:text-xl text-slate-800\">Tim Karya Ilmiah Remaja (KIR) SMAN 54 Wonogiri berhasil mempertahankan piala bergilir Lomba Karya Tulis Ilmiah (LKTI) Lingkungan se-Jawa Tengah dengan membawakan penelitian inovatif berjudul \"Pemanfaatan Eceng Gondok Waduk Gajah Mungkur sebagai Bio-Komposit Ramah Lingkungan\".</p><p>Penelitian ini mendapatkan apresiasi tinggi dari para dewan juri akademisi karena menawarkan solusi nyata bagi ekosistem waduk sekaligus memiliki nilai ekonomi tinggi bagi masyarakat lokal.</p>"
+                    body: "<p>Tim Karya Ilmiah Remaja (KIR) SMAN 54 Wonogiri berhasil mempertahankan piala bergilir Lomba Karya Tulis Ilmiah (LKTI) Lingkungan se-Jawa Tengah dengan membawakan penelitian inovatif berjudul \"Pemanfaatan Eceng Gondok Waduk Gajah Mungkur sebagai Bio-Komposit Ramah Lingkungan\".</p><p>Penelitian ini mendapatkan apresiasi tinggi dari para dewan juri akademisi karena menawarkan solusi nyata bagi ekosistem waduk sekaligus memiliki nilai ekonomi tinggi bagi masyarakat lokal.</p>"
                 }
             ],
             profil: {
@@ -982,7 +1066,6 @@
 
             const slides = (bgList && bgList.length > 0) ? bgList : DEFAULT_DATA.schoolInfo.heroBgList;
             
-            // Rebuild DOM only if slide count differs to prevent wiping out pre-rendered active image
             const existingSlides = container.querySelectorAll('.hero-slide');
             if (existingSlides.length !== slides.length) {
                 container.innerHTML = slides.map((src, idx) => `
@@ -1024,18 +1107,22 @@
             document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
         }
 
-        // Load & Hydrate Data
+        // Load & Hydrate Data (With Anti-Cache Query String + Fallback)
         async function loadWebsiteData() {
             try {
-                const res = await fetch('data.json');
+                const res = await fetch('data.json?t=' + Date.now(), { cache: 'no-store' });
                 if (res.ok) {
                     window.siteData = await res.json();
-                } else {
-                    window.siteData = DEFAULT_DATA;
+                    hydrateDOM(window.siteData);
+                    initHeroSlideshow(window.siteData?.schoolInfo?.heroBgList);
+                    initScrollObserver();
+                    return;
                 }
             } catch(e) {
-                window.siteData = DEFAULT_DATA;
+                console.warn("Membaca data.json gagal, menggunakan data bawaan:", e);
             }
+
+            window.siteData = DEFAULT_DATA;
             hydrateDOM(window.siteData);
             initHeroSlideshow(window.siteData?.schoolInfo?.heroBgList);
             initScrollObserver();
@@ -1083,12 +1170,12 @@
                 document.getElementById('stat-tahun-ini').textContent = (data.statistik.tahunIni || 3006).toLocaleString();
             }
 
-            // Aktivitas Siswa Grid
+            // Aktivitas Siswa Grid (Triggers Popup Modal)
             if (data.aktivitas) {
                 const aktivGrid = document.getElementById('aktivitas-grid');
                 if (aktivGrid) {
                     aktivGrid.innerHTML = data.aktivitas.map(item => `
-                        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group cursor-pointer flex flex-col justify-between reveal-on-scroll" onclick="openFullArticle('${item.id}')">
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group cursor-pointer flex flex-col justify-between reveal-on-scroll" onclick="openAktivitasModal('${item.id}')">
                             <div>
                                 <div class="relative h-48 sm:h-56 overflow-hidden">
                                     <img src="${item.img}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -1101,14 +1188,14 @@
                                 </div>
                             </div>
                             <div class="px-4 pb-4 sm:px-6 sm:pb-6">
-                                <span class="text-xs sm:text-sm font-bold text-brand-600 group-hover:underline inline-flex items-center gap-1">Baca Selengkapnya <i class="fa-solid fa-arrow-right text-xs"></i></span>
+                                <span class="text-xs sm:text-sm font-bold text-brand-600 group-hover:underline inline-flex items-center gap-1">Lihat Galeri <i class="fa-solid fa-expand text-xs"></i></span>
                             </div>
                         </div>
                     `).join('');
                 }
             }
 
-            // Berita & Prestasi Grid
+            // Berita & Prestasi Grid (Triggers Full Page Reader)
             if (data.berita && data.berita.length > 0) {
                 const featured = data.berita[0];
                 const restBerita = data.berita.slice(1);
@@ -1180,7 +1267,6 @@
             }
 
             if (data.kesiswaan) {
-                // PPDB Banner dynamic hydration
                 if (data.kesiswaan.ppdbBanner) {
                     const banner = data.kesiswaan.ppdbBanner;
                     if (banner.badge) document.getElementById('ppdb-banner-badge').textContent = banner.badge;
@@ -1213,7 +1299,7 @@
                 }
             }
 
-            // GTK Directory Grid (23 Teachers)
+            // GTK Directory Grid
             if (data.gtk) {
                 document.getElementById('gtk-grid').innerHTML = data.gtk.map(g => `
                     <div class="gtk-card bg-white p-4 sm:p-6 rounded-2xl border border-slate-100 text-center shadow-sm hover:shadow-md transition">
@@ -1225,7 +1311,7 @@
                 `).join('');
             }
 
-            // Sarpras Grid (10 Facilities)
+            // Sarpras Grid
             if (data.sarpras) {
                 document.getElementById('sarpras-grid').innerHTML = data.sarpras.map(s => `
                     <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm">
@@ -1242,11 +1328,10 @@
                 document.getElementById('lulusan-kerja').textContent = data.lulusan.kerja || "6%";
             }
 
-            // Re-trigger scroll observer for dynamically injected elements
             setTimeout(initScrollObserver, 100);
         }
 
-        // Dynamic Dropdown Toggle
+        // Dropdown Toggle
         function toggleDropdown(id, event) {
             if (event) event.stopPropagation();
             const el = document.getElementById(id);
@@ -1256,7 +1341,7 @@
             if (isHidden) el.classList.remove('hidden');
         }
 
-        // Router Function with Mobile Menu Auto-close & Body Scroll-Lock Handler
+        // Router Function with Mobile Menu Auto-close
         function navigateTo(pageId) {
             try {
                 const mobileMenu = document.getElementById('mobile-menu');
@@ -1292,23 +1377,49 @@
             setTimeout(initScrollObserver, 50);
         }
 
-        // Open Detail Reader
+        // Open Popup Modal for Aktivitas / Galeri Siswa
+        function openAktivitasModal(aktivitasId) {
+            let item = null;
+            if (window.siteData && window.siteData.aktivitas) {
+                item = window.siteData.aktivitas.find(a => a.id === aktivitasId);
+            }
+            if (!item && DEFAULT_DATA && DEFAULT_DATA.aktivitas) {
+                item = DEFAULT_DATA.aktivitas.find(a => a.id === aktivitasId);
+            }
+            if (!item) return;
+
+            document.getElementById('akt-modal-badge').textContent = item.badge || item.tag || 'GALERI';
+            document.getElementById('akt-modal-date').innerHTML = `<i class="fa-regular fa-calendar mr-1"></i> ${item.date || ''}`;
+            document.getElementById('akt-modal-author').innerHTML = `<i class="fa-regular fa-user mr-1"></i> ${item.author || 'Pembina Sekolah'}`;
+            document.getElementById('akt-modal-title').textContent = item.title || '';
+            document.getElementById('akt-modal-img').src = item.img || '';
+            document.getElementById('akt-modal-desc').textContent = item.desc || item.summary || '';
+
+            const modal = document.getElementById('aktivitas-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeAktivitasModal() {
+            const modal = document.getElementById('aktivitas-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Open Full Dedicated Reading Page for Berita & Prestasi
         function openFullArticle(articleId) {
             let article = null;
-            if (window.siteData) {
-                if (window.siteData.berita) {
-                    article = window.siteData.berita.find(b => b.id === articleId);
-                }
-                if (!article && window.siteData.aktivitas) {
-                    article = window.siteData.aktivitas.find(a => a.id === articleId);
-                }
+            if (window.siteData && window.siteData.berita) {
+                article = window.siteData.berita.find(b => b.id === articleId);
             }
-            if (!article && DEFAULT_DATA) {
-                article = DEFAULT_DATA.berita.find(b => b.id === articleId) || DEFAULT_DATA.aktivitas.find(a => a.id === articleId);
+            if (!article && DEFAULT_DATA && DEFAULT_DATA.berita) {
+                article = DEFAULT_DATA.berita.find(b => b.id === articleId);
             }
             if (!article) return;
 
-            document.getElementById('art-tag').textContent = article.tag || article.badge || 'INFORMASI';
+            document.getElementById('art-tag').textContent = article.tag || 'INFORMASI';
             document.getElementById('art-date').innerHTML = `<i class="fa-regular fa-calendar mr-1"></i> ${article.date || ''}`;
             document.getElementById('art-author').innerHTML = `<i class="fa-regular fa-user mr-1"></i> ${article.author || 'Admin Sekolah'}`;
             document.getElementById('art-title').textContent = article.title;
@@ -1318,7 +1429,7 @@
             navigateTo('halaman-artikel');
         }
 
-        // Mobile Menu Drawer with Overlay & Body Scroll Lock
+        // Mobile Menu Drawer
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const overlay = document.getElementById('mobile-menu-overlay');
